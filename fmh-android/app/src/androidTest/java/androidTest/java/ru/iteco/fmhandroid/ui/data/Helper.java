@@ -77,6 +77,7 @@ import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class Helper {
+
     private Helper() {
     }
 
@@ -267,25 +268,23 @@ public class Helper {
         private static final Random rand = new Random();
 
         @SafeVarargs
-        @NonNull
-        public static int randomClaims(int... items) {
+        public static int randomClaims(@NonNull int... items) {
             return items[rand.nextInt(items.length)];
         }
 
         @SafeVarargs
-        @NonNull
-        public static int randomNews(int... items) {
+        public static int randomNews(@NonNull int... items) {
             return items[rand.nextInt(items.length)];
         }
 
         @SafeVarargs
-        @NonNull
-        public static int random(int... items) {
+        public static int random(@NonNull int... items) {
             return items[rand.nextInt(items.length)];
         }
 
         public static String randomExecutor() {
-            String[] executor = {"Смирнов Николай Петрович",
+            String[] executor = {
+                    "Смирнов Николай Петрович",
                     "Лебедев Данил Александрович",
                     "Прохорова Зоя Альфредовна",
                     "Смирнов Николай Петрович",
@@ -299,7 +298,8 @@ public class Helper {
         }
 
         public static String randomCategory() {
-            String[] category = {"Объявление",
+            String[] category = {
+                    "Объявление",
                     "День рождения",
                     "Зарплата",
                     "Профсоюз",
@@ -415,7 +415,6 @@ public class Helper {
         }
 
     }
-
 
 
     public static void setUpStatusNewsNotActive(int position) {

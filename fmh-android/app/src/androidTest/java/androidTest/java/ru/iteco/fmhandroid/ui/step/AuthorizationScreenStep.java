@@ -14,9 +14,11 @@ import static org.hamcrest.core.IsNot.not;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.invalidAuthInfo;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.invalidLoginPasswordAuthInfo;
 
+import androidx.annotation.NonNull;
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.rule.ActivityTestRule;
 
+import org.hamcrest.Matchers;
 import org.junit.Rule;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
@@ -106,16 +108,12 @@ public class AuthorizationScreenStep {
     }
 
     @Step("Проверка появления предупреждающего сообщения Login and password cannot be empty")
-    public void loginAndPasswordCannotBeEmpty() {
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Login and password cannot be empty"))).check(matches(isDisplayed()));
+    public void checkingTheLoginAndPasswordCannotBeEmpty(@NonNull AppActivity activity, int text) {
+        onView(withId(text)).inRoot(withDecorView(Matchers.not(is(activity.getWindow().getDecorView()))));
     }
 
     @Step("Проверка появления предупреждающего сообщения Wrong login or password")
-    public void wrongLoginOrPassword() {
-        onView(withText(R.string.wrong_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Wrong login or password")));
+    public void checkingTheWrongLoginOrPassword(@NonNull AppActivity activity, int text) {
+        onView(withText(text)).inRoot(withDecorView(Matchers.not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 }

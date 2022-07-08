@@ -1,12 +1,5 @@
 package androidTest.java.ru.iteco.fmhandroid.ui.test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.core.IsNot.not;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.authInfo;
 
 import android.os.SystemClock;
@@ -106,13 +99,11 @@ public class AuthorizationScreenTest {
 
     @Test
     @DisplayName("a Warning Message Should Appear If The Fields Are Blank")
-    @Description("В этом тест кейсе мы проверяем, что при невводе логина или пароля появляется предупреждающая надпись")
+    @Description("В этом тест кейсе мы проверяем, что при невводе логина или пароля появляется предупреждающая надпись Login and password cannot be empty")
     public void aWarningMessageShouldAppearIfTheFieldsAreBlank() {
         authorizationScreenStep.invalidAuthorization();
         SystemClock.sleep(1000);
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Login and password cannot be empty"))).check(matches(isDisplayed()));
+        authorizationScreenStep.checkingTheLoginAndPasswordCannotBeEmpty(ActivityTestRule.getActivity(), R.string.empty_login_or_password);
     }
 
     @Test
@@ -121,42 +112,35 @@ public class AuthorizationScreenTest {
     public void warningMessagesShouldAppearWhenEnteringAnIncorrectPassword() {
         authorizationScreenStep.invalidAuthorizationLoginPassword();
         SystemClock.sleep(1000);
-        onView(withText(R.string.wrong_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Wrong login or password"))).check(matches(isDisplayed()));
+        authorizationScreenStep.checkingTheWrongLoginOrPassword(ActivityTestRule.getActivity(), R.string.wrong_login_or_password);
     }
 
     @Test
     @DisplayName("warning Messages Should Appear When You Enter Space")
-    @Description("В этом тест кейсе мы проверяем, что при невведенном логине и пароле появлется предупреждающая надпись")
+    @Description("В этом тест кейсе мы проверяем, что при невведенном логине и пароле появлется предупреждающая надпись Login and password cannot be empty")
     public void warningMessagesShouldAppearWhenYouEnterSpace() {
         authorizationScreenStep.invalidAuthorization();
         SystemClock.sleep(1000);
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Login and password cannot be empty"))).check(matches(isDisplayed()));
+
+        authorizationScreenStep.checkingTheLoginAndPasswordCannotBeEmpty(ActivityTestRule.getActivity(), R.string.empty_login_or_password);
     }
 
     @Test
     @DisplayName("warning Messages Should Appear When The Password Field Is Blank")
-    @Description("В этом тест кейсе мы проверяем, что при невведенном пароле появлется предупреждающая надпись")
+    @Description("В этом тест кейсе мы проверяем, что при невведенном пароле появлется предупреждающая надпись Login and password cannot be empty")
     public void warningMessagesShouldAppearWhenThePasswordFieldIsBlank() {
         authorizationScreenStep.invalidAuthorization();
         SystemClock.sleep(1000);
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Login and password cannot be empty"))).check(matches(isDisplayed()));
+        authorizationScreenStep.checkingTheLoginAndPasswordCannotBeEmpty(ActivityTestRule.getActivity(), R.string.empty_login_or_password);
     }
 
     @Test
     @DisplayName("warning Messages Should Appear When The Login Field Is Empty")
-    @Description("В этом тест кейсе мы проверяем, что при невведенном логине появлется предупреждающая надпись")
+    @Description("В этом тест кейсе мы проверяем, что при невведенном логине появлется предупреждающая надпись Login and password cannot be empty")
     public void warningMessagesShouldAppearWhenTheLoginFieldIsEmpty() {
         authorizationScreenStep.invalidAuthorization();
         SystemClock.sleep(1000);
-        onView(withText(R.string.empty_login_or_password))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Login and password cannot be empty"))).check(matches(isDisplayed()));
+        authorizationScreenStep.checkingTheLoginAndPasswordCannotBeEmpty(ActivityTestRule.getActivity(), R.string.empty_login_or_password);
     }
 
     @Test
