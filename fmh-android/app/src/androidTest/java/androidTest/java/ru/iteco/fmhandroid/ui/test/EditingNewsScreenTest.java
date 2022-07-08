@@ -67,7 +67,7 @@ public class EditingNewsScreenTest {
         SystemClock.sleep(5000);
     }
 
-    @Test /// добавить в кейсы
+    @Test
     @DisplayName("У экрана должно быть название")
     @Description("В этом тест кейсе мы проверяем название экрана Editing News")
     public void theScreenShouldHaveName() {
@@ -112,8 +112,7 @@ public class EditingNewsScreenTest {
         controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();
         editingNewsScreenStep.clickingOnTheCategoryField();
         SystemClock.sleep(3000);
-        onView(withClassName(is("android.widget.PopupWindow$PopupBackgroundView")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        editingNewsScreenStep.checkingTheAppearanceOfTheDropDownList(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -123,8 +122,7 @@ public class EditingNewsScreenTest {
         mainScreenStep.switchingToTheControlPanel();
         controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();
         editingNewsScreenStep.clickingOnThePublicationDateField();
-        onView(withClassName(is("android.widget.DatePicker")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        editingNewsScreenStep.checkingTheCalendarAppearance(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -134,8 +132,7 @@ public class EditingNewsScreenTest {
         mainScreenStep.switchingToTheControlPanel();
         controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();
         editingNewsScreenStep.clickingOnTheTimeField();
-        onView(withClassName(is("android.widget.RadialTimePickerView")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        editingNewsScreenStep.checkingTheAppearanceOfClockOfTheArrowType(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -246,9 +243,7 @@ public class EditingNewsScreenTest {
         controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();
         editingNewsScreenStep.deletingTheNewsTitle();
         editingNewsScreenStep.clickingOnTheSaveButton();
-        onView(withText(R.string.empty_fields))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Fill empty fields")));
+        editingNewsScreenStep.checkingTheFillEmptyFields(ActivityTestRule.getActivity(), R.string.empty_fields);
     }
 
     @Test
@@ -262,9 +257,7 @@ public class EditingNewsScreenTest {
         editingNewsScreenStep.enteringTextInTheCategoryField(text);
         SystemClock.sleep(2000);
         editingNewsScreenStep.clickingOnTheSaveButton();
-        onView(withText(R.string.error_saving))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Saving failed. Try again later.")));
+        editingNewsScreenStep.checkingTheSavingFailedTryAgainLater(ActivityTestRule.getActivity(), R.string.error_saving);
     }
 
 //    @Test
@@ -276,7 +269,6 @@ public class EditingNewsScreenTest {
 //        editingNewsScreenStep.deletingTheNewsTitle();
 //        SystemClock.sleep(2000);
 //        editingNewsScreenStep.clickingOnTheSaveButton();
-//        //доделать
 //    }
 
     @Test

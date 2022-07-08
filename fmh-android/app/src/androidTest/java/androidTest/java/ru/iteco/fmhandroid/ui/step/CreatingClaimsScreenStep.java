@@ -6,9 +6,12 @@ import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertEquals;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Search.textSearchClaims;
@@ -17,7 +20,9 @@ import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.withIndex;
 
 import android.os.SystemClock;
 
+import androidx.annotation.NonNull;
 import androidx.test.espresso.action.ViewActions;
+import androidx.test.rule.ActivityTestRule;
 
 import org.hamcrest.Matchers;
 
@@ -25,6 +30,7 @@ import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CreatingClaimsScreenElements;
 import io.qameta.allure.kotlin.Step;
 import ru.iteco.fmhandroid.R;
+import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class CreatingClaimsScreenStep {
 
@@ -204,6 +210,30 @@ public class CreatingClaimsScreenStep {
     public void checkingTheAbsenceOfSetYear(String year) {
         creatingClaimsScreenElements.getDateClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getDateClaimField().check(matches(Matchers.not(withText(year)))).check(matches(isDisplayed()));
+    }
+    @Step("Проверка появления календаря")
+    public void checkingTheCalendarAppearance(@NonNull AppActivity activity) {
+        onView(withClassName(is("android.widget.DatePicker")))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления выпадающего списка")
+    public void checkingTheAppearanceOfTheDropDownList(@NonNull AppActivity activity) {
+        onView(withClassName(is("android.widget.PopupWindow$PopupBackgroundView")))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления часов стрелочного типа")
+    public void checkingTheAppearanceOfClockOfTheArrowType(@NonNull AppActivity activity) {
+        onView(withClassName(is("android.widget.RadialTimePickerView")))
+            .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления предупреждающего сообщения Fill empty fields")
+    public void checkingTheFillEmptyFields(@NonNull AppActivity activity, int text) {
+        onView(withText(R.string.empty_fields))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
+                .check(matches(withText("Fill empty fields"))).check(matches(isDisplayed()));
     }
 
     public void createClaimStatusOpenSetUp() {

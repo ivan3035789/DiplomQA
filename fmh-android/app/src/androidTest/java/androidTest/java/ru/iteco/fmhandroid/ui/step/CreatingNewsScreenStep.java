@@ -8,16 +8,22 @@ import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
+import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.TestCase.assertEquals;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.assertNotEquals;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Rand.randomCategory;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Text.textSymbol;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.withIndex;
 
 import android.os.SystemClock;
+
+import androidx.annotation.NonNull;
 
 import org.hamcrest.core.IsNot;
 
@@ -28,6 +34,7 @@ import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CreatingNewsScreen
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.WatchScreenElements;
 import io.qameta.allure.kotlin.Step;
 import ru.iteco.fmhandroid.R;
+import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class CreatingNewsScreenStep {
 
@@ -184,6 +191,38 @@ public class CreatingNewsScreenStep {
         assertEquals(creationDateNewsItWas, creationDateNewsItWasHasBecomes);
         assertEquals(authorNewsItWas, authorNewsItWasHasBecomes);
         assertEquals(descriptionNewsItWas, descriptionNewsItWasHasBecomes);
+    }
+
+    @Step("Проверка появления календаря")
+    public void checkingTheCalendarAppearance(@NonNull AppActivity activity) {
+        onView(withClassName(is("android.widget.DatePicker")))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления выпадающего списка")
+    public void checkingTheAppearanceOfTheDropDownList(@NonNull AppActivity activity) {
+        onView(withClassName(is("android.widget.PopupWindow$PopupBackgroundView")))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления часов стрелочного типа")
+    public void checkingTheAppearanceOfClockOfTheArrowType(@NonNull AppActivity activity) {
+        onView(withClassName(is("android.widget.RadialTimePickerView")))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления предупреждающего сообщения Fill empty fields")
+    public void checkingTheFillEmptyFields(@NonNull AppActivity activity, int text) {
+        onView(withText(R.string.empty_fields))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
+                .check(matches(withText("Fill empty fields"))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления предупреждающего сообщения Saving failed. Try again later")
+    public void checkingTheSavingFailedTryAgainLater(@NonNull AppActivity activity, int text) {
+        onView(withText(R.string.error_saving))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
+                .check(matches(withText("Saving failed. Try again later.")));
     }
 
     public String nameNews() {

@@ -4,7 +4,6 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNot.not;
@@ -70,7 +69,7 @@ public class CreatingClaimsScreenTest {
         SystemClock.sleep(5000);
     }
 
-    @Test/// добавить в кейсы
+    @Test
     @DisplayName("У экрана должно быть название")
     @Description("В этом тест кейсе мы проверяем название экрана Creating Claims")
     public void theScreenShouldHaveName() {
@@ -104,8 +103,7 @@ public class CreatingClaimsScreenTest {
         mainScreenStep.randomTransitionToCreatingClaims();
         creatingClaimsScreenStep.clickingOnTheExecutorField();
         SystemClock.sleep(2000);
-        onView(withClassName(is("android.widget.PopupWindow$PopupBackgroundView")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        creatingClaimsScreenStep.checkingTheAppearanceOfTheDropDownList(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -114,8 +112,7 @@ public class CreatingClaimsScreenTest {
     public void aCalendarShouldAppear() {
         mainScreenStep.randomTransitionToCreatingClaims();
         creatingClaimsScreenStep.clickingOnTheDateField();
-        onView(withClassName(is("android.widget.DatePicker")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        creatingClaimsScreenStep.checkingTheCalendarAppearance(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -124,8 +121,7 @@ public class CreatingClaimsScreenTest {
     public void anArrowShapedClockShouldAppear() {
         mainScreenStep.randomTransitionToCreatingClaims();
         creatingClaimsScreenStep.clickingOnTheTimeField();
-        onView(withClassName(is("android.widget.RadialTimePickerView")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        creatingClaimsScreenStep.checkingTheAppearanceOfClockOfTheArrowType(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -228,9 +224,7 @@ public class CreatingClaimsScreenTest {
         creatingClaimsScreenStep.fillingInFieldsWithValidData(titleText, randomExecutor);
         creatingClaimsScreenStep.nameDeletion();
         creatingClaimsScreenStep.clickingOnTheSaveButton();
-        onView(withText(R.string.empty_fields))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Fill empty fields"))).check(matches(isDisplayed()));
+        creatingClaimsScreenStep.checkingTheFillEmptyFields(ActivityTestRule.getActivity(), R.string.empty_fields);
     }
 
     @Test

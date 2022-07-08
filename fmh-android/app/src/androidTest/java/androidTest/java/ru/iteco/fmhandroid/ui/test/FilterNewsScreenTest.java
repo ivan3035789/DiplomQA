@@ -76,7 +76,7 @@ public class FilterNewsScreenTest {
         filterNewsScreenStep.checkingTheScreenNameForNewsSearch();
     }
 
-    @Test // добавить в тест кейсы
+    @Test
     @DisplayName("the fields must have names")
     @Description("В этом тест кейсе мы проверяемя названия полей")
     public void theFieldsMustHaveNames() {

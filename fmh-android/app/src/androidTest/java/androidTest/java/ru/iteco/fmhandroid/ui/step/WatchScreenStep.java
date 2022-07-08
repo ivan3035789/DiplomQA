@@ -6,17 +6,27 @@ import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertEquals;
 
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.DateTime.randomHour23;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.DateTime.randomMinute59;
 
+import androidx.annotation.NonNull;
+import androidx.test.rule.ActivityTestRule;
+
+import org.hamcrest.Matchers;
+
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.WatchScreenElements;
 import io.qameta.allure.kotlin.Step;
 import ru.iteco.fmhandroid.R;
+import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class WatchScreenStep {
     WatchScreenElements watchScreenElements = new WatchScreenElements();
@@ -82,5 +92,12 @@ public class WatchScreenStep {
     @Step("Установка минут невалидного значения")
     public void settingTheMinutesToAnInvalidValue(String invalidMinute) {
         watchScreenElements.getInputMinute().perform(replaceText(invalidMinute), closeSoftKeyboard());
+    }
+
+    @Step("Проверка появления предупреждающего сообщения Enter a valid time")
+    public void checkingEnterValidTime(@NonNull AppActivity activity, String text) {
+        onView(withText("Enter a valid time"))
+                .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
+                .check(matches(withText("Enter a valid time")));
     }
 }

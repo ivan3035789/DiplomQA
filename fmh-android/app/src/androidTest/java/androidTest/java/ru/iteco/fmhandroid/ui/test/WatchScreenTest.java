@@ -143,8 +143,6 @@ public class WatchScreenTest {
 
         SystemClock.sleep(3000);
         watchScreenStep.clickingOnTheConfirmationButton();
-        onView(withText("Enter a valid time"))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Enter a valid time")));
+        watchScreenStep.checkingEnterValidTime(ActivityTestRule.getActivity(), "Enter a valid time");
     }
 }

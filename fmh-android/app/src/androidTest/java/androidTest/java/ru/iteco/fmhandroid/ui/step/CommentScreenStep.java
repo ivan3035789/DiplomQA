@@ -1,14 +1,23 @@
 package androidTest.java.ru.iteco.fmhandroid.ui.step;
 
+import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import static org.hamcrest.Matchers.is;
+
+import androidx.annotation.NonNull;
+
+import org.hamcrest.Matchers;
+
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CommentScreenElements;
 import io.qameta.allure.kotlin.Step;
+import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class CommentScreenStep {
 
@@ -49,5 +58,10 @@ public class CommentScreenStep {
     @Step("Проверка поле заполнено текстом")
     public void checkTheFieldIsFilledWithText(String textComment) {
         commentScreenElements.getCommentFieldName().check(matches(withText(textComment))).check(matches(isDisplayed()));
+    }
+
+    @Step("Проверка появления предупреждающего сообщения The field cannot be empty.")
+    public void checkingTheFieldCannotBeEmpty(@NonNull AppActivity activity, String text) {
+        onView(withText(text)).inRoot(withDecorView(Matchers.not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 }

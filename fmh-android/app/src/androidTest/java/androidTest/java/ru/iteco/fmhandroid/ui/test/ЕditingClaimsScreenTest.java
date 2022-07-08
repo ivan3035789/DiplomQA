@@ -1,14 +1,5 @@
 package androidTest.java.ru.iteco.fmhandroid.ui.test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.core.IsNot.not;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Rand.randomExecutor;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Text.textSymbol;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.authInfo;
@@ -66,7 +57,7 @@ public class ЕditingClaimsScreenTest {
         SystemClock.sleep(5000);
     }
 
-    @Test/// Добавить в кейсы
+    @Test
     @DisplayName("У экрана должно быть название")
     @Description("В этом тест кейсе мы проверяем название экрана Editing Claims")
     public void theScreenShouldHaveName() {
@@ -114,8 +105,7 @@ public class ЕditingClaimsScreenTest {
         claimsScreenStep.clickingOnTheNotepadWithPencilButton();
         SystemClock.sleep(3000);
         editingClaimsScreenStep.clickingOnTheExecutorField();
-        onView(withClassName(is("android.widget.PopupWindow$PopupBackgroundView")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        editingClaimsScreenStep.checkingTheAppearanceOfTheDropDownList(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -129,8 +119,7 @@ public class ЕditingClaimsScreenTest {
         claimsScreenStep.clickingOnTheNotepadWithPencilButton();
         SystemClock.sleep(3000);
         editingClaimsScreenStep.clickingOnTheDateField();
-        onView(withClassName(is("android.widget.DatePicker")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        editingClaimsScreenStep.checkingTheCalendarAppearance(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -144,8 +133,7 @@ public class ЕditingClaimsScreenTest {
         claimsScreenStep.clickingOnTheNotepadWithPencilButton();
         SystemClock.sleep(3000);
         editingClaimsScreenStep.clickingOnTheTimeField();
-        onView(withClassName(is("android.widget.RadialTimePickerView")))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
+        editingClaimsScreenStep.checkingTheAppearanceOfClockOfTheArrowType(ActivityTestRule.getActivity());
     }
 
     @Test
@@ -253,27 +241,8 @@ public class ЕditingClaimsScreenTest {
         claimsScreenStep.clickingOnTheNotepadWithPencilButton();
         editingClaimsScreenStep.deletingTextFromTheTitleField();
         editingClaimsScreenStep.clickingOnTheSaveButton();
-        onView(withText(R.string.empty_fields))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("Fill empty fields")));
+        editingClaimsScreenStep.checkingTheFillEmptyFields(ActivityTestRule.getActivity(), R.string.empty_fields);
     }
-
-//    @Test
-//    @Ignore
-//    @DisplayName("Icons should appear exclamation mark in a circle of red color")
-//    @Description("В этом тест кейсе мы проверяем, что при незаполнении полей и нажатии на кнопку SAVE в незаполненных полях появляются предупреждающие иконки")
-//    public void iconsShouldAppearExclamationMarkInCircleOfRedColor() {
-//        editingClaimsScreenStep.goToTheClaimCardWithTheOpenStatus();
-//        SystemClock.sleep(3000);
-//        Helper.Swipes.swipeToBottom();
-//        SystemClock.sleep(3000);
-//        claimsScreenStep.clickingOnTheNotepadWithPencilButton();
-//        editingClaimsScreenStep.deletingTextFromTheTitleField();
-//        editingClaimsScreenStep.clickingOnTheSaveButton();
-//        editingClaimsScreenStep.clickingOnTheButtonToConfirmTheCancellationOfEditing();
-//        onView(allOf(withId(R.id.text_input_end_icon), withParent(withParent(allOf(withId(R.id.title_edit_text), withChild(withChild(allOf(withId(R.id.textinput_suffix_text))))))))).check(matches(isDisplayed()));
-//        //доделать
-//    }
 
     @Test
     @DisplayName("The fields must be filled in with English letters")
@@ -315,7 +284,7 @@ public class ЕditingClaimsScreenTest {
 
     @Test
     @DisplayName("The status of the claim in Claims should change")
-    @Description("")
+    @Description("В этом тест кейсе мы проверяем что при установке исполнителя и дальнейшем сохранении статус меняется с Open на In progress")
     public void theStatusOfTheClaimInClaimsShouldChange() {
         String executor = randomExecutor();
 
@@ -325,8 +294,7 @@ public class ЕditingClaimsScreenTest {
         SystemClock.sleep(2000);
         editingClaimsScreenStep.clickingOnTheExecutorField();
         SystemClock.sleep(2000);
-        onView(withText(executor))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView())))).perform(click());
+        editingClaimsScreenStep.clickingOnRandomlySelectedArtist(ActivityTestRule.getActivity(), executor);
         SystemClock.sleep(2000);
         editingClaimsScreenStep.clickingOnTheSaveButton();
         SystemClock.sleep(2000);

@@ -1,11 +1,5 @@
 package androidTest.java.ru.iteco.fmhandroid.ui.test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Rand.randomClaims;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Text.textSymbol;
 
@@ -29,6 +23,7 @@ import androidTest.java.ru.iteco.fmhandroid.ui.step.MainScreenStep;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Description;
 import io.qameta.allure.kotlin.junit4.DisplayName;
+import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 @LargeTest
@@ -168,9 +163,8 @@ public class CommentScreenTest {
         SystemClock.sleep(3000);
         claimsScreenStep.clickingOnTheAddCommentButton();
         commentScreenStep.clickingOnTheSaveCommentButton();
-        onView(withText("The field cannot be empty."))
-                .inRoot(withDecorView(not(is(ActivityTestRule.getActivity().getWindow().getDecorView()))))
-                .check(matches(withText("The field cannot be empty.")));
+        commentScreenStep.checkingTheFieldCannotBeEmpty(ActivityTestRule.getActivity(), "The field cannot be empty.");
+        authorizationScreenStep.checkingTheLoginAndPasswordCannotBeEmpty(ActivityTestRule.getActivity(), R.string.empty_login_or_password);
     }
 
     @Test
