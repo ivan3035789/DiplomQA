@@ -150,10 +150,10 @@ public class CreatingClaimsScreenStep {
     }
 
     @Step("Проверка на отсутствие в полях слов из русских букв")
-    public void checkingForTheAbsenceOfWordsFromRussianLettersInTheFields(String invalidLanguageText) {
-        creatingClaimsScreenElements.getTitleClaimField().check(matches(not(withText(invalidLanguageText)))).check(matches(isDisplayed()));
-        creatingClaimsScreenElements.getExecutorClaimField().check(matches(not(withText(invalidLanguageText)))).check(matches(isDisplayed()));
-        creatingClaimsScreenElements.getDescriptionClaimField().check(matches(not(withText(invalidLanguageText)))).check(matches(isDisplayed()));
+    public void checkingForTheAbsenceOfWordsFromRussianLettersInTheFields() {
+        creatingClaimsScreenElements.getTitleClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
+        creatingClaimsScreenElements.getExecutorClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
+        creatingClaimsScreenElements.getDescriptionClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
     }
 
     @Step("Проверка на присудствие в полях слов из английских букв")
@@ -210,6 +210,7 @@ public class CreatingClaimsScreenStep {
         creatingClaimsScreenElements.getDateClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getDateClaimField().check(matches(Matchers.not(withText(year)))).check(matches(isDisplayed()));
     }
+
     @Step("Проверка появления календаря")
     public void checkingTheCalendarAppearance(@NonNull AppActivity activity) {
         onView(withClassName(is("android.widget.DatePicker")))

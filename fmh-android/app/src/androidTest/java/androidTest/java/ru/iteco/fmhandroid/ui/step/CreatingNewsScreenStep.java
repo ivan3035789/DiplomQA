@@ -148,9 +148,9 @@ public class CreatingNewsScreenStep {
     }
 
     @Step("Проверка на отсутствие в полях слов из русских букв")
-    public void checkingForTheAbsenceOfWordsFromRussianLettersInTheFields(String invalidLanguageText) {
-        creatingNewsScreenElements.getTitleFieldNews().check(matches(IsNot.not(withText(invalidLanguageText)))).check(matches(isDisplayed()));
-        creatingNewsScreenElements.getDescriptionFieldNews().check(matches(IsNot.not(withText(invalidLanguageText)))).check(matches(isDisplayed()));
+    public void checkingForTheAbsenceOfWordsFromRussianLettersInTheFields() {
+        creatingNewsScreenElements.getTitleFieldNews().check(matches(withText(""))).check(matches(isDisplayed()));
+        creatingNewsScreenElements.getDescriptionFieldNews().check(matches(withText(""))).check(matches(isDisplayed()));
     }
 
     @Step("Проверка на присудствие в полях слов из английских букв")

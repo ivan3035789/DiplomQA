@@ -231,7 +231,7 @@ public class CreatingClaimsScreenTest {
         } catch (RuntimeException expected) {
 
         } finally {
-            creatingClaimsScreenStep.checkingForTheAbsenceOfWordsFromRussianLettersInTheFields(invalidLanguageText);
+            creatingClaimsScreenStep.checkingForTheAbsenceOfWordsFromRussianLettersInTheFields();
         }
     }
 

@@ -43,7 +43,7 @@ public class CommentScreenTest {
             mainScreenStep.checkNameMainScreen();
         } catch (NoMatchingViewException e) {
             authorizationScreenStep.validLoginPassword(Helper.authInfo());
-            SystemClock.sleep(3000);
+            SystemClock.sleep(5000);
         }
     }
 
@@ -62,7 +62,7 @@ public class CommentScreenTest {
         claimsScreenStep.choosingRandomClaim(position);
         SystemClock.sleep(3000);
         Helper.Swipes.swipeToBottom();
-        SystemClock.sleep(3000);
+        SystemClock.sleep(5000);
         claimsScreenStep.clickingOnTheAddCommentButton();
         commentScreenStep.checkingTheEntryToTheCommentScreen();
     }

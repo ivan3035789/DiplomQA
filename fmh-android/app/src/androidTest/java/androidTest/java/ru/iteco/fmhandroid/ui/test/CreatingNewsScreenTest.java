@@ -214,7 +214,7 @@ public class CreatingNewsScreenTest {
             creatingNewsScreenStep.invalidLanguage(invalidLanguageText, invalidLanguageText);
         } catch (RuntimeException expected) {
         } finally {
-            creatingNewsScreenStep.checkingForTheAbsenceOfWordsFromRussianLettersInTheFields(invalidLanguageText);
+            creatingNewsScreenStep.checkingForTheAbsenceOfWordsFromRussianLettersInTheFields();
         }
     }
 }
