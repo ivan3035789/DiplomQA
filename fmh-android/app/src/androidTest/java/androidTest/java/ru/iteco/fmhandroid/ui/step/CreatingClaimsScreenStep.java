@@ -22,7 +22,6 @@ import android.os.SystemClock;
 
 import androidx.annotation.NonNull;
 import androidx.test.espresso.action.ViewActions;
-import androidx.test.rule.ActivityTestRule;
 
 import org.hamcrest.Matchers;
 
@@ -231,7 +230,7 @@ public class CreatingClaimsScreenStep {
 
     @Step("Проверка появления предупреждающего сообщения Fill empty fields")
     public void checkingTheFillEmptyFields(@NonNull AppActivity activity, int text) {
-        onView(withText(R.string.empty_fields))
+        onView(withText(text))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
                 .check(matches(withText("Fill empty fields"))).check(matches(isDisplayed()));
     }

@@ -1,14 +1,5 @@
 package androidTest.java.ru.iteco.fmhandroid.ui.test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
-import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.core.IsNot.not;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.DateTime.invalidHour;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.DateTime.invalidMinute;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.DateTime.randomHour23;
@@ -27,7 +18,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.step.AuthorizationScreenStep;
 import androidTest.java.ru.iteco.fmhandroid.ui.step.CreatingClaimsScreenStep;
 import androidTest.java.ru.iteco.fmhandroid.ui.step.MainScreenStep;
@@ -35,7 +25,6 @@ import androidTest.java.ru.iteco.fmhandroid.ui.step.WatchScreenStep;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Description;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 @LargeTest
@@ -108,7 +97,7 @@ public class WatchScreenTest {
 
         mainScreenStep.randomTransitionToCreatingClaims();
         SystemClock.sleep(3000);
-        String timeBefore = Helper.Text.getText(onView(withId(R.id.time_in_plan_text_input_edit_text)));
+        String timeBefore = watchScreenStep.timeBefore();
         SystemClock.sleep(3000);
         creatingClaimsScreenStep.clickingOnTheTimeField();
         watchScreenStep.pressingTheButtonToChangeTheWatchType();
@@ -120,9 +109,8 @@ public class WatchScreenTest {
 
         SystemClock.sleep(3000);
         watchScreenStep.clickingOnTheConfirmationButton();
-        String timeAfter = Helper.Text.getText(onView(withId(R.id.time_in_plan_text_input_edit_text)));
-        assertEquals(hour + ":" + minute, timeAfter);
-        assertNotEquals(timeBefore, timeAfter);
+        String timeAfter = watchScreenStep.timeAfter();
+        watchScreenStep.checkingTheSetTime(hour, minute, timeAfter, timeBefore);
     }
 
     @Test
@@ -132,6 +120,7 @@ public class WatchScreenTest {
         mainScreenStep.randomTransitionToCreatingClaims();
         String invalidHour = invalidHour();
         String invalidMinute = invalidMinute();
+
         SystemClock.sleep(3000);
         creatingClaimsScreenStep.clickingOnTheTimeField();
         watchScreenStep.pressingTheButtonToChangeTheWatchType();

@@ -24,7 +24,7 @@ public class CalendarScreenElements {
                                     0),
                             3)));
 
-    ViewInteraction buttonToCancelTheYearSetting = onView(
+    private final ViewInteraction buttonToCancelTheYearSetting = onView(
             allOf(withId(android.R.id.button2), withText("Cancel"),
                     childAtPosition(
                             withClassName(is("android.widget.LinearLayout")),

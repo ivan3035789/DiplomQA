@@ -13,6 +13,7 @@ import io.qameta.allure.kotlin.Step;
 public class FilterNewsScreenStep {
 
     FilterNewsScreenElements filterNewsScreenElements = new FilterNewsScreenElements();
+
     @Step("Ввод данных для поиска")
     public void enteringSearchData(String category, String dateStartInput, String dateEndInput) {
         filterNewsScreenElements.getCategoryField().perform(replaceText(category));

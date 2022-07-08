@@ -93,7 +93,8 @@ public class NewsScreenTest {
         String firstAgainNewsDescription = newsScreenStep.takeTheDescriptionOfTheFirstNewsAfterTwoSorts(position);
         SystemClock.sleep(2000);
 
-        newsScreenStep.reconciliationOfNewsTitlesAndDescriptionsAfterSorting(firstNews, firstNewsDescription, lastNews, lastNewsDescription, firstNewsAgain, firstAgainNewsDescription);
+        newsScreenStep.reconciliationOfNewsTitlesAndDescriptionsAfterSorting(
+                firstNews, firstNewsDescription, lastNews, lastNewsDescription, firstNewsAgain, firstAgainNewsDescription);
     }
 
     @Test

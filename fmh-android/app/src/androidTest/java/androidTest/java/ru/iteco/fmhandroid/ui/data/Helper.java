@@ -254,7 +254,6 @@ public class Helper {
                 SystemClock.sleep(2000);
                 controlPanelScreenStep.clickingOnTheConfirmationButtonToDeleteTheNews();
                 SystemClock.sleep(2000);
-//            } catch (PerformException e) {
             } catch (RuntimeException exception) {
                 break;
             }
@@ -663,9 +662,11 @@ public class Helper {
         public static String textSymbol(int numberOfLetters) {
             Random random = new Random();
             String randomText;
-            String[] texts = {" ", "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
+            String[] texts = {
+                    " ", "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
                     "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m", "!", "@", "#", "$", "%", "^", "&",
-                    "*", "(", ")", "_", "+"};
+                    "*", "(", ")", "_", "+"
+            };
             randomText = texts[random.nextInt(texts.length)];
             for (int i = 1; i < numberOfLetters; i++) {
                 randomText = randomText.concat(texts[random.nextInt(texts.length)]);

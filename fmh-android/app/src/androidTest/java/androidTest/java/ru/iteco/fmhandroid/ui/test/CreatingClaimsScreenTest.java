@@ -1,12 +1,5 @@
 package androidTest.java.ru.iteco.fmhandroid.ui.test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.core.IsNot.not;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Rand.randomExecutor;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Text.text51Symbol;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.Text.textSymbol;
@@ -60,7 +53,6 @@ public class CreatingClaimsScreenTest {
         } catch (NoMatchingViewException e) {
             authorizationScreenStep.validLoginPassword(authInfo());
             SystemClock.sleep(5000);
-
         }
     }
 

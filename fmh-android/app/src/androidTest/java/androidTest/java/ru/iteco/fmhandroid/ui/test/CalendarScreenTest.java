@@ -31,6 +31,7 @@ import ru.iteco.fmhandroid.ui.AppActivity;
 @LargeTest
 @RunWith(AllureAndroidJUnit4.class)
 public class CalendarScreenTest {
+
     MainScreenStep mainScreenStep = new MainScreenStep();
     AuthorizationScreenStep authorizationScreenStep = new AuthorizationScreenStep();
     CreatingClaimsScreenStep creatingClaimsScreenStep = new CreatingClaimsScreenStep();

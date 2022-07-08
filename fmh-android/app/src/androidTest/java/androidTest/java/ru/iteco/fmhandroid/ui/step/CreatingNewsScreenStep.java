@@ -213,14 +213,14 @@ public class CreatingNewsScreenStep {
 
     @Step("Проверка появления предупреждающего сообщения Fill empty fields")
     public void checkingTheFillEmptyFields(@NonNull AppActivity activity, int text) {
-        onView(withText(R.string.empty_fields))
+        onView(withText(text))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
                 .check(matches(withText("Fill empty fields"))).check(matches(isDisplayed()));
     }
 
     @Step("Проверка появления предупреждающего сообщения Saving failed. Try again later")
     public void checkingTheSavingFailedTryAgainLater(@NonNull AppActivity activity, int text) {
-        onView(withText(R.string.error_saving))
+        onView(withText(text))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
                 .check(matches(withText("Saving failed. Try again later.")));
     }

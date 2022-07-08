@@ -23,7 +23,6 @@ import androidTest.java.ru.iteco.fmhandroid.ui.step.MainScreenStep;
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Description;
 import io.qameta.allure.kotlin.junit4.DisplayName;
-import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 @LargeTest
@@ -164,7 +163,6 @@ public class CommentScreenTest {
         claimsScreenStep.clickingOnTheAddCommentButton();
         commentScreenStep.clickingOnTheSaveCommentButton();
         commentScreenStep.checkingTheFieldCannotBeEmpty(ActivityTestRule.getActivity(), "The field cannot be empty.");
-        authorizationScreenStep.checkingTheLoginAndPasswordCannotBeEmpty(ActivityTestRule.getActivity(), R.string.empty_login_or_password);
     }
 
     @Test
