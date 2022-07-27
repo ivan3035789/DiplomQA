@@ -25,85 +25,85 @@ import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CreatingClaimsScre
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CreatingNewsScreenElements;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.MainScreenElements;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.NewsScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class MainScreenStep {
 
     MainScreenElements mainScreenElements = new MainScreenElements();
 
-    @Step("Нажатие на первую претензию в списке")
     public void clickingOnTheFirstClaimInTheList(int position) {
+        Allure.step("Нажатие на первую претензию в списке");
         mainScreenElements.getClaimList().perform(actionOnItemAtPosition(position, click()));
     }
 
-    @Step("Нажатие на all Claims")
     public void clickingOnAllClaims() {
+        Allure.step("Нажатие на all Claims");
         mainScreenElements.getAllClaims().perform(click());
     }
 
-    @Step("Нажатие на кнопку ActionMenu")
     public void clickingOnTheActionMenuButton() {
+        Allure.step("Нажатие на кнопку ActionMenu");
         mainScreenElements.getMainMenuImageButton().perform(click());
     }
 
-    @Step("Нажатие на название News")
     public void clickingOnTheNewsName() {
+        Allure.step("Нажатие на название News");
         mainScreenElements.getTitleNews().perform(click());
     }
 
-    @Step("Нажатие на название Main")
     public void clickingOnTheMainName() {
+        Allure.step("Нажатие на название Main");
         mainScreenElements.getTitleMain().perform(click());
     }
 
-    @Step("Нажатие на название Claims")
     public void clickingOnTheClaimsName() {
+        Allure.step("Нажатие на название Claims");
         mainScreenElements.getTitleClaimsScreen().perform(click());
     }
 
-    @Step("Нажатие на название About")
     public void clickingOnTheAboutName() {
+        Allure.step("Нажатие на название About");
         mainScreenElements.getTitleAbout().perform(click());
     }
 
-    @Step("Нажатие на текстовую ссылку AllNews")
     public void clickingOnTheAllNewsTextLink() {
+        Allure.step("Нажатие на текстовую ссылку AllNews");
         mainScreenElements.getAllNews().perform(click());
     }
 
-    @Step("Нажатие на текстовую ссылку AllClaims")
     public void clickingOnTheAllClaimsTextLink() {
+        Allure.step("Нажатие на текстовую ссылку AllClaims");
         mainScreenElements.getAllClaims().perform(click());
     }
 
-    @Step("Нажатие на кнопку в виде бабочки")
     public void pressingTheButtonInTheFormOfButterfly() {
+        Allure.step("Нажатие на кнопку в виде бабочки");
         mainScreenElements.getThematicQuotesButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку +")
     public void clickingOnTheButtonToGoToTheClaimCreationScreen() {
+        Allure.step("Нажатие на кнопку +");
         mainScreenElements.getCreateClaimsButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку для развертывания/свертывания новостного блока ")
     public void clickingOnTheButtonExpandTheNewsFeed() {
+        Allure.step("Нажатие на кнопку для развертывания/свертывания новостного блока");
         mainScreenElements.getExpandNewsFeedButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку для развертывания/свертывания блока с претензиями ")
     public void expandTheClaimsFeed() {
+        Allure.step("Нажатие на кнопку для развертывания/свертывания блока с претензиями");
         mainScreenElements.getExpandTheClaimsFeedButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку развертывания/свертывания описания Новости ")
     public void clickingOnTheExpandNewsDescriptionButton(int position) {
+        Allure.step("Нажатие на кнопку развертывания/свертывания описания Новости");
         mainScreenElements.getExpandNewsButton().perform(actionOnItemAtPosition(position, click()));
     }
 
-    @Step("Swipe до первой видемой претензии")
     public void swipeUpBlockClaims() {
+        Allure.step("Swipe до первой видемой претензии");
         mainScreenElements.getTitleClaimsScreen().perform(swipeUp()).perform(swipeUp()).perform(swipeUp());
         mainScreenElements.getTitleClaimsScreen().perform(swipeUp()).perform(swipeUp()).perform(swipeUp());
         mainScreenElements.getTitleClaimsScreen().perform(swipeUp()).perform(swipeUp()).perform(swipeUp());
@@ -111,62 +111,64 @@ public class MainScreenStep {
         SystemClock.sleep(5000);
     }
 
-    @Step("Проверка название в блоке all News видно")
     public void theNameAllNewsIsVisible() {
+        Allure.step("Проверка название в блоке all News видно");
         mainScreenElements.getAllNews().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка название в блоке all News не видно")
     public void theNameAllNewsIsNotVisible() {
+        Allure.step("Проверка название в блоке all News не видно");
         mainScreenElements.getAllNews().check(matches(not(isDisplayed())));
     }
 
-    @Step("Проверка название в блоке all Claims видно")
     public void theNameAllClaimsIsVisible() {
+        Allure.step("Проверка название в блоке all Claims видно");
         mainScreenElements.getAllClaims().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка название в блоке all Claims не видно")
     public void theNameAllClaimsIsNotVisible() {
+        Allure.step("Проверка название в блоке all Claims не видно");
         mainScreenElements.getAllClaims().check(matches(not(isDisplayed())));
     }
 
-    @Step("Проверка названия блока с новостями")
     public void checkTheNameOfTheNewsBlock() {
+        Allure.step("Проверка названия блока с новостями");
         mainScreenElements.getChapterNews().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка названия блока с претензиями")
     public void checkTheNameOfTheClaimsBlock() {
+        Allure.step("Проверка названия блока с претензиями");
         mainScreenElements.getChapterClaims().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка нахождения пользователя на экране Main")
     public void checkNameMainScreen() {
+        Allure.step("Проверка нахождения пользователя на экране Main");
         mainScreenElements.getChapterNews().check(matches(isDisplayed()));
         mainScreenElements.getChapterClaims().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка видемости текста описания новости ")
     public void checkingTheTextOfTheNewsDescriptionIsVisible(int position) {
+        Allure.step("Проверка видемости текста описания новости");
         String descriptionText = Helper.Text.getText(onView(withIndex(withId(R.id.news_item_description_text_view), position)));
         ViewInteraction textNews =  onView(allOf(withId(R.id.news_item_description_text_view), withText(descriptionText)));
         SystemClock.sleep(3000);
         textNews.check(matches(isDisplayed()));
     }
 
-    @Step("Рандомный переход в Creating Claims")
-    public void randomTransitionToCreatingClaims() { //добавить шаги в тесты
+    public void randomTransitionToCreatingClaims() {
+        Allure.step("Рандомный переход в Creating Claims");
+        //добавить шаги в тесты
         randomLogInToClaimsCreation();
     }
 
-    @Step("Рандомный переход в Creating News")
-    public void randomTransitionToCreatingNews() { //добавить шаги в тесты
+    public void randomTransitionToCreatingNews() {
+        Allure.step("Рандомный переход в Creating News");
+        //добавить шаги в тесты
         randomLogInToNewsCreation();
     }
 
-    @Step("Переход в Control Panel")
     public void switchingToTheControlPanel() {
+        Allure.step("Переход в Control Panel");
         MainScreenStep mainScreenStep = new MainScreenStep();
         NewsScreenStep newsScreenStep = new NewsScreenStep();
         mainScreenStep.clickingOnTheActionMenuButton();

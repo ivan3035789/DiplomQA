@@ -15,7 +15,7 @@ import android.os.SystemClock;
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.ClaimsScreenElements;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.FilteringWindowScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 
 public class FilteringWindowScreenStep {
 
@@ -23,69 +23,68 @@ public class FilteringWindowScreenStep {
     ClaimsScreenStep claimsScreenStep = new ClaimsScreenStep();
     ClaimsScreenElements claimsScreenElements = new ClaimsScreenElements();
     FilteringWindowScreenElements filteringWindowScreenElements = new FilteringWindowScreenElements();
-
-    @Step("Переход к экрану Filtering")
+    
     public void switchingToFilteringWindow() {
+        Allure.step("Переход к экрану Filtering");
         mainScreenStep.clickingOnTheActionMenuButton();
         mainScreenStep.clickingOnTheClaimsName();
         SystemClock.sleep(3000);
         claimsScreenStep.pressingOnTheButtonToGoToTheFilteringScreen();
         SystemClock.sleep(3000);
     }
-
-    @Step("Нажатие на кнопку ok")
+    
     public void clickingOnTheOkButton() {
+        Allure.step("Нажатие на кнопку ok");
         filteringWindowScreenElements.getOkButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку выхода из Filtering")
     public void clickingOnTheExitFilteringButton() {
+        Allure.step("Нажатие на кнопку выхода из Filtering");
         filteringWindowScreenElements.getCancelButton().perform(click());
     }
-
-    @Step("Нажатие на чек бокс In progress")
+    
     public void clickingOnTheCheckBoxInProgress() {
+        Allure.step("Нажатие на чек бокс In progress");
         filteringWindowScreenElements.getCheckBoxInProgress().perform(click());
     }
-
-    @Step("Нажатие на чек бокс Open")
+    
     public void clickingOnTheCheckBoxOpen() {
+        Allure.step("Нажатие на чек бокс Open");
         filteringWindowScreenElements.getCheckBoxOpen().perform(click());
     }
-
-    @Step("Нажатие на чек бокс Executed")
+    
     public void clickingOnTheCheckBoxExecuted() {
+        Allure.step("Нажатие на чек бокс Executed");
         filteringWindowScreenElements.getCheckBoxExecuted().perform(click());
     }
-
-    @Step("Нажатие на чек бокс Cancelled")
+    
     public void clickingOnTheCheckBoxCancelled() {
+        Allure.step("Нажатие на чек бокс Cancelled");
         filteringWindowScreenElements.getCheckBoxCancelled().perform(click());
     }
-
-    @Step("Нажатие на выбранный случайным образом чек бокс")
+    
     public void clickingOnRandomlySelectedCheckBox() {
+        Allure.step("Нажатие на выбранный случайным образом чек бокс");
         randomCheckBox();
     }
-
-    @Step("Проверка статуса")
+    
     public void checkingTheStatus() {
+        Allure.step("Проверка статуса");
         checkStatus(Helper.Text.getText(claimsScreenElements.getStatus()));
     }
-
-    @Step("Проверка сообщения при ненайденных претензиях")
+    
     public void checkingTheMessageForUndiscoveredClaims() {
+        Allure.step("Проверка сообщения при ненайденных претензиях");
         onView(withText(startsWith("There is nothing here yet"))).check(matches(isDisplayed()));
     }
-
-    @Step("Проверка названия экрана filtering")
+    
     public void checkingTheScreenNameFiltering() {
+        Allure.step("Проверка названия экрана filtering");
         filteringWindowScreenElements.getFilteringNameScreen().check(matches(isDisplayed()));
     }
-
-
-    @Step("Проверка отсутствия название экрана Filtering")
+    
     public void checkingForMissingScreenNameFiltering() {
+        Allure.step("Проверка отсутствия название экрана Filtering");
         claimsScreenElements.getScreenNameClaims().check(matches(not(filteringWindowScreenElements.getFilteringNameScreen())));
     }
 }

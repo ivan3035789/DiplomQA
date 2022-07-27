@@ -11,43 +11,43 @@ import static org.hamcrest.Matchers.startsWith;
 import android.os.SystemClock;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.AdvancedNewsSearchScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 
 public class AdvancedNewsSearchScreenStep {
     AdvancedNewsSearchScreenElements advancedNewsSearchScreenElements = new AdvancedNewsSearchScreenElements();
 
-    @Step("Проверка названия экрана расширенного поиска")
     public void checkingTheNameOfTheAdvancedSearchScreen() {
+        Allure.step("Проверка названия экрана расширенного поиска");
         advancedNewsSearchScreenElements.getNamePage().check(matches(isDisplayed()));
     }
 
-    @Step("Заполнение полей для поиска по дате")
     public void fillingInFieldsForDateSearch(String dateStartInput, String dateEndInput) {
+        Allure.step("Заполнение полей для поиска по дате");
         advancedNewsSearchScreenElements.getDateStartField().perform(replaceText(dateStartInput));
         SystemClock.sleep(3000);
         advancedNewsSearchScreenElements.getDateEndField().perform(replaceText(dateEndInput));
     }
 
-    @Step("Заполнение поля категории")
     public void fillingInTheCategoryField(String category) {
+        Allure.step("Заполнение поля категории");
         advancedNewsSearchScreenElements.getFieldNameCategory().perform(replaceText(category));
     }
 
-    @Step("Проверка видимости идентифицирующих названий полей")
     public void checkingTheVisibilityOfIdentifyingFieldNames() {
+        Allure.step("Проверка видимости идентифицирующих названий полей");
         advancedNewsSearchScreenElements.getFieldNameCategory().check(matches(isDisplayed()));
         advancedNewsSearchScreenElements.getFieldNameStartDate().check(matches(isDisplayed()));
         advancedNewsSearchScreenElements.getFieldNameEndDate().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка видимости названий чек боксов")
     public void checkingTheVisibilityOfTheNamesOfCheckBoxes() {
+        Allure.step("Проверка видимости названий чек боксов");
         advancedNewsSearchScreenElements.getCheckBoxActive().check(matches(isDisplayed()));
         advancedNewsSearchScreenElements.getCheckBoxNotActive().check(matches(isDisplayed()));
     }
 
-    @Step("Заполнение полей данными для поиска")
     public void fillingInFieldsWithSearchData(String category, String dateStartInput, String dateEndInput) {
+        Allure.step("Заполнение полей данными для поиска");
         advancedNewsSearchScreenElements.getFieldNameCategory().perform(replaceText(category));
         SystemClock.sleep(3000);
         advancedNewsSearchScreenElements.getFieldNameStartDate().perform(replaceText(dateStartInput));
@@ -55,35 +55,35 @@ public class AdvancedNewsSearchScreenStep {
         advancedNewsSearchScreenElements.getFieldNameEndDate().perform(replaceText(dateEndInput));
     }
 
-    @Step("Заполнение полей для даты")
     public void fillingInTheFieldsForTheDate(String dateStartInput, String dateEndInput) {
+        Allure.step("Заполнение полей для даты");
         advancedNewsSearchScreenElements.getDateStartField().perform(replaceText(dateStartInput));
         SystemClock.sleep(3000);
         advancedNewsSearchScreenElements.getDateEndField().perform(replaceText(dateEndInput));
     }
 
-    @Step("Проверка текста при ненайденных новостях")
     public void checkingTheTextWhenNewsIsNotFound() {
+        Allure.step("Проверка текста при ненайденных новостях");
         onView(withText(startsWith("There is nothing here yet"))).check(matches(isDisplayed()));
     }
 
-    @Step("Нажатие на кнопку filter поиска новостей")
     public void clickingOnTheFilterButtonToSearchForNews() {
+        Allure.step("Нажатие на кнопку filter поиска новостей");
         advancedNewsSearchScreenElements.getFilterButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку Cancel отмена поиска")
     public void clickingOnTheCancelSearchButton() {
+        Allure.step("Нажатие на кнопку Cancel отмена поиска");
         advancedNewsSearchScreenElements.getCancelButton().perform(click());
     }
 
-    @Step("Нажатие на чек бокс Active")
     public void clickingOnTheActiveCheckBox() {
+        Allure.step("Нажатие на чек бокс Active");
         advancedNewsSearchScreenElements.getCheckBoxNotActive().perform(click());
     }
 
-    @Step("Нажатие на чек бокс Not Active")
     public void clickingOnTheNotActiveCheckBox() {
+        Allure.step("Нажатие на чек бокс Not Active");
         advancedNewsSearchScreenElements.getCheckBoxActive().perform(click());
     }
 }

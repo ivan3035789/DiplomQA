@@ -21,76 +21,76 @@ import androidx.annotation.NonNull;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.WatchScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
 public class WatchScreenStep {
     WatchScreenElements watchScreenElements = new WatchScreenElements();
 
-    @Step("Нажатие на кнопку смены вида часов")
     public void pressingTheButtonToChangeTheWatchType() {
+        Allure.step("Нажатие на кнопку смены вида часов");
         watchScreenElements.getButtonToChangeTheTypeOfClock().perform(click());
     }
 
-    @Step("Установка часа выбранного случайным образом время валидное")
     public void settingTheHourSelectedRandomly(String hour) {
+        Allure.step("Установка часа выбранного случайным образом время валидное");
         watchScreenElements.getInputHour().perform(replaceText(hour), closeSoftKeyboard());
     }
 
-    @Step("Установка минут выбранных случайным образом время валидное")
     public void settingTheMinutesSelectedRandomly(String minute) {
+        Allure.step("Установка минут выбранных случайным образом время валидное");
         watchScreenElements.getInputMinute().perform(replaceText(minute), closeSoftKeyboard());
     }
 
-    @Step("Установка часа невалидного значения")
     public void settingTheHourToAnInvalidValue(String invalidHour) {
+        Allure.step("Установка часа невалидного значения");
         watchScreenElements.getInputHour().perform(replaceText(invalidHour), closeSoftKeyboard());
     }
 
-    @Step("Установка минут невалидного значения")
     public void settingTheMinutesToAnInvalidValue(String invalidMinute) {
+        Allure.step("Установка минут невалидного значения");
         watchScreenElements.getInputMinute().perform(replaceText(invalidMinute), closeSoftKeyboard());
     }
 
-    @Step("Нажатие на кнопку подтверждения")
     public void clickingOnTheConfirmationButton() {
+        Allure.step("Нажатие на кнопку подтверждения");
         watchScreenElements.getOkButton().perform(scrollTo(), click());
     }
 
-    @Step("Нажатие на кнопку отмены установки времени")
     public void pressingTheCancelTimeSettingButton() {
+        Allure.step("Нажатие на кнопку отмены установки времени");
         watchScreenElements.getCancelButton().perform(scrollTo(), click());
     }
 
-    @Step("Установка случайно выбранного часа")
     public void settingRandomlySelectedHour() {
+        Allure.step("Установка случайно выбранного часа");
         watchScreenElements.getInputHour().perform(replaceText(randomHour23()), closeSoftKeyboard());
     }
 
-    @Step("Установка случайно выбранной минуты")
     public void settingRandomlySelectedMinute() {
+        Allure.step("Установка случайно выбранной минуты");
         watchScreenElements.getInputMinute().perform(replaceText(randomMinute59()), closeSoftKeyboard());
     }
 
-    @Step("Проверка выставленного времени")
     public void checkingTheSetTime(String hour, String minute, String timeAfter, String timeBefore) {
+        Allure.step("Проверка выставленного времени");
         assertEquals(hour + ":" + minute, timeAfter);
         assertNotEquals(timeBefore, timeAfter);
     }
 
-    @Step("Проверка вида цифровых часов ")
     public void checkingTheTypeOfDigitalClock() {
+        Allure.step("Проверка вида цифровых часов");
         watchScreenElements.getTextTime().check(matches(withText("Set time"))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка показаний часов до  установки и после отмены установки")
     public void checkingTheClockReadingsBeforeInstallationAndAfterCancelingTheInstallation(String timeBefore, String timeAfter) {
+        Allure.step("Проверка показаний часов до  установки и после отмены установки");
         assertEquals(timeBefore, timeAfter);
     }
 
-    @Step("Проверка появления предупреждающего сообщения Enter a valid time")
     public void checkingEnterValidTime(@NonNull AppActivity activity, String text) {
+        Allure.step("Проверка появления предупреждающего сообщения Enter a valid time");
         onView(withText(text))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
                 .check(matches(withText("Enter a valid time"))).check(matches(isDisplayed()));

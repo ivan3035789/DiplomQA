@@ -14,31 +14,31 @@ import androidx.test.espresso.ViewInteraction;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.ThematicQuotesScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class ThematicQuotesScreenStep {
 
     ThematicQuotesScreenElements thematicQuotesScreenElements = new ThematicQuotesScreenElements();
 
-    @Step("Проветка названия экрана {loveIsAll}")
     public void checkingTheScreenName() {
+        Allure.step("Проветка названия экрана {loveIsAll}");
         thematicQuotesScreenElements.getLoveIsAll().check(matches(isDisplayed()));
         thematicQuotesScreenElements.getLoveIsAll().check(matches(withText("Love is all")));
     }
 
-    @Step("Выбор цитаты")
     public void quoteSelection(int position) {
+        Allure.step("Выбор цитаты");
         thematicQuotesScreenElements.getRecyclerView().perform(actionOnItemAtPosition(position, click()));
     }
 
-    @Step("Нажатие на кнопку развернуть/свернуть описание цитаты")
     public void openDescription() {
+        Allure.step("Нажатие на кнопку развернуть/свернуть описание цитаты");
         thematicQuotesScreenElements.getQuoteTitle().perform(click());
     }
 
-    @Step("Проверка названия и описания")
     public void checkingTheText(String title, ViewInteraction title2, String description, ViewInteraction description2) {
+        Allure.step("Проверка названия и описания");
         assertEquals("«Хоспис для меня - это то, каким должен быть мир.", title);
         title2.check(matches(isDisplayed()));
         assertEquals("Ну, идеальное устройство мира в моих глазах. Где никто не оценивает, никто не осудит, где говоришь, и тебя слышат, где, если страшно, тебя обнимут и возьмут за руку, а если холодно тебя согреют.” Юля Капис, волонтер", description);

@@ -4,24 +4,24 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.ApplicationLoadingScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 
 public class ApplicationLoadingScreenStep {
 
     ApplicationLoadingScreenElements applicationLoadingScreenElements = new ApplicationLoadingScreenElements();
 
-    @Step("Проверка просмотр изображения на заставке")
     public void checkSplashscreenImageView() {
+        Allure.step("Проверка просмотр изображения на заставке");
         applicationLoadingScreenElements.getSplashscreenImageView().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка текстовое представление заставки")
     public void checkSplashscreenTextView() {
+        Allure.step("Проверка текстовое представление заставки");
         applicationLoadingScreenElements.getSplashscreenTextView().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка индикатора выполнения ")
     public void checkProgressIndicator() {
+        Allure.step("Проверка индикатора выполнения");
         applicationLoadingScreenElements.getProgressIndicator().check(matches(isDisplayed()));
     }
 }

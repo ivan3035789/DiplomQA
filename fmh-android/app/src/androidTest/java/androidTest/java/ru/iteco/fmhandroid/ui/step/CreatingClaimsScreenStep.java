@@ -27,7 +27,7 @@ import org.hamcrest.Matchers;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CreatingClaimsScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 import ru.iteco.fmhandroid.ui.AppActivity;
 
@@ -35,62 +35,62 @@ public class CreatingClaimsScreenStep {
 
     CreatingClaimsScreenElements creatingClaimsScreenElements = new CreatingClaimsScreenElements();
 
-    @Step("Нажатие на кнопку сохранения")
     public void clickingOnTheSaveButton() {
+        Allure.step("Нажатие на кнопку сохранения");
         creatingClaimsScreenElements.getSaveButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку отмены выхода из создания претензии")
     public void clickingOnTheCancelButtonToExitTheClaimCreation() {
+        Allure.step("Нажатие на кнопку отмены выхода из создания претензии");
         creatingClaimsScreenElements.getCancelButtonInWindow().perform(click());
     }
 
-    @Step("Нажатие на кнопку отмены создания претензии")
     public void clickingOnTheCancelClaimCreationButton() {
+        Allure.step("Нажатие на кнопку отмены создания претензии");
         creatingClaimsScreenElements.getCancelButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку подтверждения отмены создания претензии")
     public void clickingOnTheButtonToConfirmTheCancellationOfTheClaimCreation() {
+        Allure.step("Нажатие на кнопку подтверждения отмены создания претензии");
         creatingClaimsScreenElements.getOkButton().perform(click());
     }
 
-    @Step("Ввод текста 51 символ")
     public void textInput(String invalidText) {
+        Allure.step("Ввод текста 51 символ");
         creatingClaimsScreenElements.getTitleClaimField().perform(typeText(invalidText));
     }
 
-    @Step("Нажатие на поле Executor")
     public void clickingOnTheExecutorField() {
+        Allure.step("Нажатие на поле Executor");
         creatingClaimsScreenElements.getExecutorClaimField().perform(click()).perform(ViewActions.closeSoftKeyboard());
     }
 
-    @Step("Нажатие на поле дата")
     public void clickingOnTheDateField() {
+        Allure.step("Нажатие на поле дата");
         creatingClaimsScreenElements.getDateClaimField().perform(click());
     }
 
-    @Step("Нажатие на поле время")
     public void clickingOnTheTimeField() {
+        Allure.step("Нажатие на поле время");
         creatingClaimsScreenElements.getTimeClaimField().perform(click());
     }
 
-    @Step("Ввод невалидного языка")
     public void invalidLanguage(String title, String executed, String description) {
+        Allure.step("Ввод невалидного языка");
         creatingClaimsScreenElements.getTitleClaimField().perform(typeText(title));
         creatingClaimsScreenElements.getExecutorClaimField().perform(typeText(executed));
         creatingClaimsScreenElements.getDescriptionClaimField().perform(typeText(description)).perform(closeSoftKeyboard());
     }
 
-    @Step("Ввод валидного языка")
     public void validLanguage(String title, String executed, String description) {
+        Allure.step("Ввод валидного языка");
         creatingClaimsScreenElements.getTitleClaimField().perform(typeText(title));
         creatingClaimsScreenElements.getExecutorClaimField().perform(typeText(executed));
         creatingClaimsScreenElements.getDescriptionClaimField().perform(typeText(description)).perform(closeSoftKeyboard());
     }
 
-    @Step("Заполнение полей валидными данными")
     public void fillingInFieldsWithValidData(String titleText, String randomExecutor) {
+        Allure.step("Заполнение полей валидными данными");
         WatchScreenStep watchScreenStep = new WatchScreenStep();
         CalendarScreenStep calendarScreenStep = new CalendarScreenStep();
 
@@ -108,8 +108,8 @@ public class CreatingClaimsScreenStep {
         SystemClock.sleep(2000);
     }
 
-    @Step("Заполнение полей валидными данными для создания претензии с открытым статусом")
     public void fillingInTheFieldsWithValidDataToCreateClaimWithAnOpenStatus(String titleText) {
+        Allure.step("Заполнение полей валидными данными для создания претензии с открытым статусом");
         WatchScreenStep watchScreenStep = new WatchScreenStep();
         CalendarScreenStep calendarScreenStep = new CalendarScreenStep();
 
@@ -124,20 +124,20 @@ public class CreatingClaimsScreenStep {
         creatingClaimsScreenElements.getDescriptionClaimField().perform(replaceText(titleText), closeSoftKeyboard());
     }
 
-    @Step("Удаление названия")
     public void nameDeletion() {
+        Allure.step("Удаление названия");
         creatingClaimsScreenElements.getTitleClaimField().perform(replaceText(""));
     }
 
-    @Step("Поиск созданной претензии")
     public void searchForCreatedClaim(String titleText) {
+        Allure.step("Поиск созданной претензии");
         textSearchClaims(titleText);
     }
 
-    @Step("Проверка данных созданной претензии и найденной")
     public void checkingTheDataOfTheCreatedClaimAndTheFoundOne(
             String title, String title2, String executor, String executor2, String date, String date2, String time, String time2,
             String description, String description2) {
+        Allure.step("Проверка данных созданной претензии и найденной");
         assertEquals(title, title2);
         if (executor.equals("NOT ASSIGNED")) {
             assertEquals(executor, executor2);
@@ -149,30 +149,30 @@ public class CreatingClaimsScreenStep {
         assertEquals(description.trim(), description2.trim());
     }
 
-    @Step("Проверка на отсутствие в полях слов из русских букв")
     public void checkingForTheAbsenceOfWordsFromRussianLettersInTheFields() {
+        Allure.step("Проверка на отсутствие в полях слов из русских букв");
         creatingClaimsScreenElements.getTitleClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getExecutorClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getDescriptionClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка на присудствие в полях слов из английских букв")
     public void checkingForThePresenceOfWordsFromEnglishLettersInTheFields(String validLanguageText) {
+        Allure.step("Проверка на присудствие в полях слов из английских букв");
         creatingClaimsScreenElements.getTitleClaimField().check(matches(withText(validLanguageText))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getExecutorClaimField().check(matches(withText(validLanguageText))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getDescriptionClaimField().check(matches(withText(validLanguageText))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка выставленной даты с датой в поле ")
     public void checkingTheSetDateWithTheDateInTheField(String dateField, String today) {
+        Allure.step("Проверка выставленной даты с датой в поле");
         creatingClaimsScreenElements.getDateClaimField().check(matches(withText(dateField))).check(matches(isDisplayed()));
         assertEquals(today, dateField);
     }
 
-    @Step("Проверка данных и статуса созданной претензии и найденной")
     public void checkingTheDataAndStatusOfTheClaimCreatedAndFound(
             String title, String titleOnCaredClaims, String date, String dateOnCaredClaims, String time, String timeOnCaredClaims,
             String description, String descriptionOnCaredClaims) {
+        Allure.step("Проверка данных и статуса созданной претензии и найденной");
         ClaimsScreenStep claimsScreenStep = new ClaimsScreenStep();
 
         assertEquals(title, titleOnCaredClaims);
@@ -183,8 +183,8 @@ public class CreatingClaimsScreenStep {
         claimsScreenStep.checkingTheOpenStatus();
     }
 
-    @Step("Проверка идентифицирующих названий полей для заполнения")
     public void checkNameFieldInCreatingClaims() {
+        Allure.step("Проверка идентифицирующих названий полей для заполнения");
         creatingClaimsScreenElements.getTitleName().check(matches(isDisplayed()));
         creatingClaimsScreenElements.getExecutorName().check(matches(isDisplayed()));
         creatingClaimsScreenElements.getDateName().check(matches(isDisplayed()));
@@ -192,45 +192,45 @@ public class CreatingClaimsScreenStep {
         creatingClaimsScreenElements.getDescriptionName().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка количества введенных символов и  символов в поле ")
     public void checkingTheNumberOfCharactersEnteredAndCharactersInTheField() {
+        Allure.step("Проверка количества введенных символов и  символов в поле");
         String text = Helper.Text.getText(onView(withId(R.id.title_edit_text)));
         int textLength = text.length();
         assertEquals(50, textLength);
     }
 
-    @Step("Проверка названия экрана создания претензии creating Claims")
     public void checkingTheNameOfTheClaimCreationScreen() {
+        Allure.step("Проверка названия экрана создания претензии creating Claims");
         creatingClaimsScreenElements.getCreatingNameScreen().check(matches(withText("Creating"))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getClaimsNameScreen().check(matches(withText("Claims"))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка отсутствия установленного года в поле")
     public void checkingTheAbsenceOfSetYear(String year) {
+        Allure.step("Проверка отсутствия установленного года в поле");
         creatingClaimsScreenElements.getDateClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
         creatingClaimsScreenElements.getDateClaimField().check(matches(Matchers.not(withText(year)))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка появления календаря")
     public void checkingTheCalendarAppearance(@NonNull AppActivity activity) {
+        Allure.step("Проверка появления календаря");
         onView(withClassName(is("android.widget.DatePicker")))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка появления выпадающего списка")
     public void checkingTheAppearanceOfTheDropDownList(@NonNull AppActivity activity) {
+        Allure.step("Проверка появления выпадающего списка");
         onView(withClassName(is("android.widget.PopupWindow$PopupBackgroundView")))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка появления часов стрелочного типа")
     public void checkingTheAppearanceOfClockOfTheArrowType(@NonNull AppActivity activity) {
+        Allure.step("Проверка появления часов стрелочного типа");
         onView(withClassName(is("android.widget.RadialTimePickerView")))
             .inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка появления предупреждающего сообщения Fill empty fields")
     public void checkingTheFillEmptyFields(@NonNull AppActivity activity, int text) {
+        Allure.step("Проверка появления предупреждающего сообщения Fill empty fields");
         onView(withText(text))
                 .inRoot(withDecorView(not(is(activity.getWindow().getDecorView()))))
                 .check(matches(withText("Fill empty fields"))).check(matches(isDisplayed()));

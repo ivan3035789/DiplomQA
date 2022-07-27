@@ -28,96 +28,96 @@ import org.junit.Assert;
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.ClaimsScreenElements;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.FilteringWindowScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 import ru.iteco.fmhandroid.R;
 
 public class ClaimsScreenStep {
 
     ClaimsScreenElements claimsScreenElements = new ClaimsScreenElements();
 
-    @Step("Нажатие на кнопку перехода на экран создания претензии")
     public void clickingOnTheButtonToGoToTheClaimCreationScreen() {
+        Allure.step("Нажатие на кнопку перехода на экран создания претензии");
         claimsScreenElements.getCreateClaimsButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку перехода на экран Filtering")
     public void pressingOnTheButtonToGoToTheFilteringScreen() {
+        Allure.step("Нажатие на кнопку перехода на экран Filtering");
         claimsScreenElements.getFilteringButton().perform(click());
     }
 
-    @Step("Проверка статус не должен быть Executed")
     public void checkingTheStatusShouldNotBeExecuted() {
+        Allure.step("Проверка статус не должен быть Executed");
         claimsScreenElements.getStatus().check(matches(not(withText("Executed"))));
     }
 
-    @Step("Нажатие на кнопку выхода")
     public void pressingTheExitButton() {
+        Allure.step("Нажатие на кнопку выхода");
         claimsScreenElements.getExitButton().perform(click());
     }
 
-    @Step("Нажатие на случайно выбранную претензию")
     public void clickingOnRandomlySelectedClaim(int position) {
+        Allure.step("Нажатие на случайно выбранную претензию");
         claimsScreenElements.getBlockClaims().perform(actionOnItemAtPosition(position, click()));
     }
 
-    @Step("Нажатие на кнопку закрыть")
     public void clickingOnTheCloseButton() {
+        Allure.step("Нажатие на кнопку закрыть");
         claimsScreenElements.getCloseImageButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку блокнот с карандашом для перехода к экрану для редактирования")
     public void clickingOnTheNotepadWithPencilButton() {
+        Allure.step("Нажатие на кнопку блокнот с карандашом для перехода к экрану для редактирования");
         claimsScreenElements.getEditClaimsButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку с иконкой блокнот с шестеренкой")
     public void clickingOnTheButtonWithTheNotepadIconWithGear() {
+        Allure.step("Нажатие на кнопку с иконкой блокнот с шестеренкой");
         claimsScreenElements.getButtonChangeStatus().perform(click());
     }
 
-    @Step("Нажатие на взять в работу")
     public void clickingOnTakeToWork() {
+        Allure.step("Нажатие на взять в работу");
         claimsScreenElements.getTakeToWork().perform(click());
     }
 
-    @Step("Нажатие на Сбросить")
     public void clickingOnReset() {
+        Allure.step("Нажатие на Сбросить");
         claimsScreenElements.getThrowOff().perform(click());
     }
 
-    @Step("Нажатие на кнопку ок добавления комментария")
     public void clickingOnTheOkButtonToAddComment() {
+        Allure.step("Нажатие на кнопку ок добавления комментария");
         claimsScreenElements.getOkButtonAddComment().perform(scrollTo(), click());
     }
 
-    @Step("Нажатие на кнопку добавления комментария")
     public void clickingOnTheAddCommentButton() {
+        Allure.step("Нажатие на кнопку добавления комментария");
         claimsScreenElements.getAddComment().perform(click());
     }
 
-    @Step("Нажатие на кнопку для входа в экран редактирования комментария")
     public void clickingOnTheButtonToEnterTheCommentEditingScreen() {
+        Allure.step("Нажатие на кнопку для входа в экран редактирования комментария");
         claimsScreenElements.getEditCommentButton().perform(click());
     }
 
-    @Step("Нажатие на для выполнения")
     public void clickingOnToExecute() {
+        Allure.step("Нажатие на для выполнения");
         claimsScreenElements.getToExecute().perform(click());
     }
 
-    @Step("Нажатие на для отмены")
     public void clickingOnToCancel() {
+        Allure.step("Нажатие на для отмены");
         claimsScreenElements.getCancelButton().perform(click());
     }
 
-    @Step("Случайный выбор претензии")
     public void choosingRandomClaim(int position) {
+        Allure.step("Случайный выбор претензии");
         claimsScreenElements.getBlockClaims().perform(actionOnItemAtPosition(position, click()));
         SystemClock.sleep(3000);
     }
 
-    @Step("Случайный выбор претензии со статусом Open")
     public void searchForClaimsWithTheOpenStatus() {
+        Allure.step("Случайный выбор претензии со статусом Open");
         FilteringWindowScreenElements filteringWindowScreenElements = new FilteringWindowScreenElements();
         pressingOnTheButtonToGoToTheFilteringScreen();
         filteringWindowScreenElements.getCheckBoxInProgress().perform(click());
@@ -127,18 +127,18 @@ public class ClaimsScreenStep {
         SystemClock.sleep(3000);
     }
 
-    @Step("Проверка статус не должен быть Cancelled")
     public void checkingTheStatusShouldNotBeCancelled() {
+        Allure.step("Проверка статус не должен быть Cancelled");
         claimsScreenElements.getStatus().check(matches(not(withText("Cancelled"))));
     }
 
-    @Step("Проверка названия экрана Claims")
     public void checkScreenNameClaims() {
+        Allure.step("Проверка названия экрана Claims");
         claimsScreenElements.getScreenNameClaims().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка идентифицирующих названий в претензии")
     public void verificationOfIdentifyingNamesInTheClaim() {
+        Allure.step("Проверка идентифицирующих названий в претензии");
         claimsScreenElements.getTitle().check(matches(isDisplayed()));
         claimsScreenElements.getExecutorLabel().check(matches(isDisplayed()));
         claimsScreenElements.getPlanDateLabel().check(matches(isDisplayed()));
@@ -148,8 +148,8 @@ public class ClaimsScreenStep {
         claimsScreenElements.getCreatedLabel().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка названий в претензии")
     public void checkClaim() {
+        Allure.step("Проверка названий в претензии");
         String textExecutor = Helper.Text.getText(claimsScreenElements.getExecutorText());
         claimsScreenElements.getExecutorText().check(matches(withText(textExecutor))).check(matches(isDisplayed()));
         claimsScreenElements.getPlanDateText().check(matches(isDisplayed()));
@@ -164,79 +164,79 @@ public class ClaimsScreenStep {
         claimsScreenElements.getCreatedLabel().check(matches(withText("Created"))).check(matches(isDisplayed()));
     }
 
-    @Step("Заполнение поля комментария")
     public void fillingInTheCommentField(String text) {
+        Allure.step("Заполнение поля комментария");
         claimsScreenElements.getCommentField().perform(typeText(text));
     }
 
-    @Step("Нажатие на кнопку отмены добавления комментария")
     public void clickingOnTheButtonToCancelAddingComment() {
+        Allure.step("Нажатие на кнопку отмены добавления комментария");
         claimsScreenElements.getCancelAddCommentButton().perform(click());
     }
 
-    @Step("Проверка отсутствия комментария")
     public void checkingTheAbsenceOfComment(String commentText) {
+        Allure.step("Проверка отсутствия комментария");
         ViewInteraction commentTextFromField = onView(allOf(withId(R.id.comment_description_text_view), withParent(withParent(allOf(withId(R.id.claim_comments_list_recycler_view), withChild(withChild(allOf(withText(commentText)))))))));
         claimsScreenElements.getCommentStatus().check(matches(not(withText(commentTextFromField.toString()))));
     }
 
-    @Step("Проверка видимости добавленного комментария")
     public void checkingTheVisibilityOfTheAddedComment() {
+        Allure.step("Проверка видимости добавленного комментария");
         claimsScreenElements.getCommentStatus().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка должен добавиться комментарий")
     public void checkingCommentShouldBeAdded(String validTextComment) {
+        Allure.step("Проверка должен добавиться комментарий");
         onView(allOf(withId(R.id.comment_description_text_view), withText(validTextComment.trim()),
                 withParent(withParent(withId(R.id.claim_comments_list_recycler_view))))).check(matches(withText(validTextComment.trim()))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка комментария до редактирования и после")
     public void checkingTheCommentBeforeEditingAndAfter(String validTextComment) {
+        Allure.step("Проверка комментария до редактирования и после");
         onView(allOf(withId(R.id.comment_description_text_view), withText(validTextComment),
                 withParent(withParent(withId(R.id.claim_comments_list_recycler_view))))).check(matches(withText(validTextComment))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка добавленного комментария ")
     public void checkingTheAddedComment(String validTextComment) {
+        Allure.step("Проверка добавленного комментария");
         onView(allOf(withId(R.id.comment_description_text_view), withText(validTextComment.trim()),
                 withParent(withParent(withId(R.id.claim_comments_list_recycler_view))))).check(matches(withText(validTextComment.trim()))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка коментарий не должен создаться")
     public void checkingTheCommentShouldNotBeCreated(String validTextComment) {
+        Allure.step("Проверка коментарий не должен создаться");
         assertNotEquals(validTextComment , searchForAnUncreatedComment(validTextComment.trim()));
     }
 
-    @Step("Проверка открытого статуса")
     public void checkingTheOpenStatus() {
+        Allure.step("Проверка открытого статуса");
         claimsScreenElements.getStatus().check(matches(withText("Open"))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка статуса In Progress")
     public void checkingTheInProgressStatus() {
+        Allure.step("Проверка статуса In Progress");
         claimsScreenElements.getStatus().check(matches(withText("In progress"))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка статуса Executed")
     public void checkingTheExecutedStatus() {
+        Allure.step("Проверка статуса Executed");
         claimsScreenElements.getStatus().check(matches(withText("Executed"))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка статуса Canceled")
     public void checkingTheCanceledStatus() {
+        Allure.step("Проверка статуса Canceled");
         claimsScreenElements.getStatus().check(matches(withText("Canceled"))).check(matches(isDisplayed()));
     }
 
-    @Step("Проверка отсутствия в блоке претензий не созданной претензии ")
     public void checkingForTheAbsenceOfAnUncreatedClaim(String titleText) {
+        Allure.step("Проверка отсутствия в блоке претензий не созданной претензии");
         assertNotEquals(titleText, searchForAnUncreatedClaim(titleText));
     }
 
-    @Step("Сравнение данных до редактирования и после")
     public void comparisonOfDataBeforeAndAfterEditing(
             String executorTextItWas, String executorTextItWasHasBecome, String planDateTextItWas, String planDateTextItWasHasBecome,
             String timeTextItWas, String timeTextItWasHasBecome, String authorTextItWas, String authorTextItWasHasBecome) {
+        Allure.step("Сравнение данных до редактирования и после");
         Assert.assertEquals(executorTextItWas, executorTextItWasHasBecome);
         Assert.assertEquals(planDateTextItWas, planDateTextItWasHasBecome);
         Assert.assertEquals(timeTextItWas, timeTextItWasHasBecome);

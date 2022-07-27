@@ -20,55 +20,55 @@ import java.time.format.DateTimeFormatter;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.data.Helper;
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.CalendarScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 
 public class CalendarScreenStep {
 
     CalendarScreenElements calendarScreenElements = new CalendarScreenElements();
 
-    @Step("Нажатие на кнопку подтвердить")
     public void clickingOnTheConfirmButton() {
+        Allure.step("Нажатие на кнопку подтвердить");
         calendarScreenElements.getOkButton().perform(scrollTo(), click());
     }
 
-    @Step("Нажатие на кнопку для выбора года")
     public void pressingTheButtonToSelectTheYear() {
+        Allure.step("Нажатие на кнопку для выбора года");
         calendarScreenElements.getButtonOfTheYear().perform(click());
     }
 
-    @Step("Нажатие на кнопку перехода к следующему месяцу {randomMonth} раз")
     public void pressingTheButtonToGoToTheNextMonthTwelveTimes(int randomMonth) {
+        Allure.step("Нажатие на кнопку перехода к следующему месяцу {randomMonth} раз");
         clickingNextMonth(randomMonth);
     }
 
-    @Step("Нажатие на кнопку перехода к предыдущему месяцу {randomMonth} раз")
     public void clickingOnTheButtonToGoToThePreviousMonthTwelveTimes(int randomMonth) {
+        Allure.step("Нажатие на кнопку перехода к предыдущему месяцу {randomMonth} раз");
         clickingPreviousMonth(randomMonth);
     }
 
-    @Step("Нажатие на кнопку отмены установки года")
     public void clickingOnTheCancelYearSettingButton() {
+        Allure.step("Нажатие на кнопку отмены установки года");
         calendarScreenElements.getButtonToCancelTheYearSetting().perform(scrollTo(), click());
     }
 
-    @Step("Установка даты")
     public void settingDate(int yearInt, int monthInt, int dayInt) {
+        Allure.step("Установка даты");
         settingTheDate(yearInt, monthInt, dayInt);
     }
 
-    @Step("Установка года")
     public void settingTheYear(int randomYear) {
+        Allure.step("Установка года");
         calendarScreenElements.getYear().atPosition(randomYear).perform(scrollTo(), click());
     }
 
-    @Step("Проверка отображения в Header календаря изменения месяца, числа")
     public void checkingTheDisplayInTheCalendarHeaderOfTheMonthNameChange(ViewInteraction dateFromTheCalendarHeader, String dayOfWeek, String month, String day, String dateFromTheCalendar, String dayOfWeekPlusMonth, String monthPlusTwoMonth, String dayPlusYearPlusMonth) {
+        Allure.step("Проверка отображения в Header календаря изменения месяца, числа");
         dateFromTheCalendarHeader.check(matches(isDisplayed())).check(matches(withText(firstUpperCase(dayOfWeekPlusMonth) + ", " + firstUpperCase(monthPlusTwoMonth) + " " + dayPlusYearPlusMonth)));
         assertEquals(firstUpperCase(dayOfWeek) + ", " + firstUpperCase(month) + " " + day, dateFromTheCalendar);
     }
 
-    @Step("Проверка отображения в Header календаря изменения года")
     public void checkingTheYearChangeCalendarDisplayInTheHeader(ViewInteraction yearFromTheCalendarHeader, String yearNumberOfMonths, String year) {
+        Allure.step("Проверка отображения в Header календаря изменения года");
         yearFromTheCalendarHeader.check(matches(withText(year))).check(matches(isDisplayed()));
         assertEquals(yearNumberOfMonths, year);
     }

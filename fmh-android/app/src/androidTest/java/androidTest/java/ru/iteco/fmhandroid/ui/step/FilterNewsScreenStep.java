@@ -8,14 +8,14 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import android.os.SystemClock;
 
 import androidTest.java.ru.iteco.fmhandroid.ui.screenElements.FilterNewsScreenElements;
-import io.qameta.allure.kotlin.Step;
+import io.qameta.allure.kotlin.Allure;
 
 public class FilterNewsScreenStep {
 
     FilterNewsScreenElements filterNewsScreenElements = new FilterNewsScreenElements();
 
-    @Step("Ввод данных для поиска")
     public void enteringSearchData(String category, String dateStartInput, String dateEndInput) {
+        Allure.step("Ввод данных для поиска");
         filterNewsScreenElements.getCategoryField().perform(replaceText(category));
         SystemClock.sleep(2000);
         filterNewsScreenElements.getDateStartField().perform(replaceText(dateStartInput));
@@ -23,44 +23,44 @@ public class FilterNewsScreenStep {
         filterNewsScreenElements.getDateEndField().perform(replaceText(dateEndInput));
     }
 
-    @Step("Нажатие на кнопку отмены поиска")
     public void clickingOnTheCancelSearchButton() {
+        Allure.step("Нажатие на кнопку отмены поиска");
         filterNewsScreenElements.getCancelButton().perform(click());
     }
 
-    @Step("Нажатие на кнопку поиска")
     public void clickingOnTheSearchButton() {
+        Allure.step("Нажатие на кнопку поиска");
         filterNewsScreenElements.getFilterButton().perform(click());
     }
 
-    @Step("Ввод категории")
     public void enteringCategory(String category) {
+        Allure.step("Ввод категории");
         filterNewsScreenElements.getCategoryField().perform(replaceText(category));
     }
 
-    @Step("Ввод начала даты")
     public void enteringTheStartDate(String dateStartInput) {
+        Allure.step("Ввод начала даты");
         filterNewsScreenElements.getDateStartField().perform(replaceText(dateStartInput));
     }
 
-    @Step("Ввод конца даты")
     public void enteringTheEndOfTheDate(String dateEndInput) {
+        Allure.step("Ввод конца даты");
         filterNewsScreenElements.getDateEndField().perform(replaceText(dateEndInput));
     }
 
-    @Step("Ввод дат")
     public void enteringDates(String dateStartInput, String dateEndInput) {
+        Allure.step("Ввод дат");
         filterNewsScreenElements.getDateStartField().perform(replaceText(dateStartInput));
         filterNewsScreenElements.getDateEndField().perform(replaceText(dateEndInput));
     }
 
-    @Step("Проверка названия экрана для поиска новостей")
     public void checkingTheScreenNameForNewsSearch() {
+        Allure.step("Проверка названия экрана для поиска новостей");
         filterNewsScreenElements.getNameFilterNews().check(matches(isDisplayed()));
     }
 
-    @Step("Проверка идентифицирующих названий полей")
     public void checkingIdentifyingFieldNames() {
+        Allure.step("Проверка идентифицирующих названий полей");
         filterNewsScreenElements.getFieldNameCategory().check(matches(isDisplayed()));
         filterNewsScreenElements.getFieldNameStartDate().check(matches(isDisplayed()));
         filterNewsScreenElements.getFieldNameEndDate().check(matches(isDisplayed()));
