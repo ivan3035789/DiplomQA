@@ -264,31 +264,8 @@ public class CalendarScreenTest {
         calendarScreenStep.clickingOnTheCancelYearSettingButton();
         SystemClock.sleep(3000);
         creatingClaimsScreenStep.checkingTheNameOfTheClaimCreationScreen();
-        creatingClaimsScreenStep.checkingTheAbsenceOfSetYear(yearFromTheCalendarHeaderAfter);
+        creatingClaimsScreenStep.checkingTheAbsenceOfSetYear();
     }
-
-//    @Test
-//    @DisplayName("Must not choose the day of the month")
-//    @Description("В этом тест кейсе мы проверяем, что при нажатии на числа месяца серого цвета, число не выбирается")
-//    public void mustNotChooseTheDayOfTheMonth() {
-//        int randomDayBefore = randomDay();
-//        String dayOfWeekStr = String.valueOf(LocalDate.now().minusDays(randomDayBefore).getDayOfWeek()).substring(0, 3).toLowerCase();
-//        int yearInt = LocalDate.now().getYear();
-//        String monthStr = String.valueOf(LocalDate.now().minusDays(randomDayBefore).getMonth()).substring(0, 3).toLowerCase();
-//        int monthInt = LocalDate.now().minusDays(randomDayBefore).getMonthValue();
-//        String dayStr = String.valueOf(LocalDate.now().minusDays(randomDayBefore).getDayOfMonth());
-//        int dayInt = Integer.parseInt(dayStr);
-//
-//        mainScreen.getCreateClaimsButton().perform(click());
-//        creatingClaimsScreen.getDateClaimField().perform(click());
-//        settingTheDate(yearInt, monthInt, dayInt);
-//        SystemClock.sleep(3000);
-//        creatingClaimsScreen.getOkButton().perform(click());
-//
-//        String date = Helper.GetText.getText(headerDate(firstUpperCase(String.valueOf(LocalDate.now().plusDays(randomDayBefore).getDayOfWeek()).substring(0, 3).toLowerCase()), firstUpperCase(String.valueOf(LocalDate.now().plusDays(randomDayBefore).getMonth()).substring(0, 3).toLowerCase()), String.valueOf(LocalDate.now().plusDays(randomDayBefore).getDayOfMonth())));
-//        headerDate(firstUpperCase(String.valueOf(LocalDate.now().plusDays(randomDayBefore).getDayOfWeek()).substring(0, 3).toLowerCase()), firstUpperCase(String.valueOf(LocalDate.now().plusDays(randomDayBefore).getMonth()).substring(0, 3).toLowerCase()), String.valueOf(LocalDate.now().plusDays(randomDayBefore).getDayOfMonth())).check(matches(withText(firstUpperCase(dayOfWeekStr) + ", " + firstUpperCase(monthStr) + " " + dayStr))).check(matches(isDisplayed()));
-//        assertEquals(firstUpperCase(dayOfWeekStr) + ", " + firstUpperCase(monthStr) + " " + dayStr, date);
-//    }
 
     @Test
     @DisplayName("There should be a change of year")
@@ -331,7 +308,7 @@ public class CalendarScreenTest {
         calendarScreenStep.clickingOnTheCancelYearSettingButton();
         SystemClock.sleep(3000);
         creatingClaimsScreenStep.checkingTheNameOfTheClaimCreationScreen();
-        creatingClaimsScreenStep.checkingTheAbsenceOfSetYear(yearFromTheCalendarHeaderAfter);
+        creatingClaimsScreenStep.checkingTheAbsenceOfSetYear();
     }
 
     @Test

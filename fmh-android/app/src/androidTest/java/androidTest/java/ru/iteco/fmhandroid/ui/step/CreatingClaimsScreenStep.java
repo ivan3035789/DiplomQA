@@ -205,10 +205,9 @@ public class CreatingClaimsScreenStep {
         creatingClaimsScreenElements.getClaimsNameScreen().check(matches(withText("Claims"))).check(matches(isDisplayed()));
     }
 
-    public void checkingTheAbsenceOfSetYear(String year) {
+    public void checkingTheAbsenceOfSetYear() {
         Allure.step("Проверка отсутствия установленного года в поле");
         creatingClaimsScreenElements.getDateClaimField().check(matches(withText(""))).check(matches(isDisplayed()));
-        creatingClaimsScreenElements.getDateClaimField().check(matches(Matchers.not(withText(year)))).check(matches(isDisplayed()));
     }
 
     public void checkingTheCalendarAppearance(@NonNull AppActivity activity) {
