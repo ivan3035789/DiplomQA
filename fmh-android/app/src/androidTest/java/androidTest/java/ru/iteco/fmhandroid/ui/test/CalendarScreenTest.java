@@ -158,7 +158,7 @@ public class CalendarScreenTest {
 
     @Test
     @DisplayName("The set date must be displayed correctly")
-    @Description("В этом тест кейсе мы проверяем, что при выборе даты, дата в верхней части окна соответствует  выбранной пользователем")
+    @Description("В этом тест кейсе мы проверяем, что при выборе даты, дата в верхней части окна соответствует выбранной пользователем")
     public void theSetDateMustBeDisplayedCorrectly() {
         SystemClock.sleep(3000);
         int randomDay = randomDay();
@@ -292,7 +292,7 @@ public class CalendarScreenTest {
 
     @Test
     @DisplayName("There should be a change of year")
-    @Description("В этом тест кейсе мы проверяем, что при нажатии в верхней части окна на год, открывается окно для выбора года ")
+    @Description("В этом тест кейсе мы проверяем, что при нажатии в верхней части окна на год, открывается окно для выбора года, год можно менять")
     public void thereShouldBeChangeOfYear1() {
         int randomYear = random(1, 2);
         String yearPlusRandomYear = String.valueOf(LocalDate.now().plusYears(randomYear).getYear());

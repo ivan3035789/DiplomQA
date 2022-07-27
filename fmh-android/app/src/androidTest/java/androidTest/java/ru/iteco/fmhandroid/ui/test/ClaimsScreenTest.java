@@ -60,7 +60,7 @@ public class ClaimsScreenTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Claims")
     public void theScreenShouldHaveName() {
         mainScreenStep.clickingOnTheActionMenuButton();

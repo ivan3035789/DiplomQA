@@ -11,6 +11,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withParent;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.TestCase.assertEquals;
 import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.startsWith;
 import static org.junit.Assert.assertNotEquals;
 import static androidTest.java.ru.iteco.fmhandroid.ui.data.Helper.DateTime.dateFormat;
@@ -195,6 +196,16 @@ public class ControlPanelScreenStep {
         assertEquals(descriptionNewsItWas, descriptionNewsItWasHasBecomes);
     }
 
+    public void checkingTheInvisibilityOfTheNewsDescription() {
+        Allure.step("Проверка невидимости описания новости");
+        onView(withIndex(withId(R.id.news_item_description_text_view), 0)).check(matches(not(isDisplayed())));
+    }
+
+    public void checkingTheVisibilityOfTheNewsDescription() {
+        Allure.step("Проверка видимости описания новости");
+        onView(withIndex(withId(R.id.news_item_description_text_view), 0)).check(matches(isDisplayed()));
+    }
+
     public void checkingTheDataOfTheFirstNewsInTheListBeforeAndAfterDeletingTheNews(
             String nameNewsItWas, String nameNewsItWasHasBecomes, String publicationDateNewsItWas, String publicationDateNewsItWasHasBecomes,
             String creationDateNewsItWas, String creationDateNewsItWasHasBecomes, String authorNewsItWas, String authorNewsItWasHasBecomes,
@@ -244,6 +255,10 @@ public class ControlPanelScreenStep {
     }
 
     public String descriptionNews() {
+        return Helper.Text.getText(onView(withIndex(withId(R.id.news_item_description_text_view), 0)));
+    }
+
+    public String descriptionNewsPosition(int position) {
         return Helper.Text.getText(onView(withIndex(withId(R.id.news_item_description_text_view), 0)));
     }
 }

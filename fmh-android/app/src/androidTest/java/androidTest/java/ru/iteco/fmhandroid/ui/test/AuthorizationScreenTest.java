@@ -48,14 +48,14 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("there should be a name authorization")
+    @DisplayName("There should be a name authorization")
     @Description("В этом тест кейсе мы проверяем название страницы для авторизации пользователя (страница \"Authorization\")")
     public void thereShouldBeNameAuthorization() {
         authorizationScreenStep.checkingTheNameOfTheAuthorizationScreen();
     }
 
     @Test
-    @DisplayName("login And Password Fields Should Be Displayed")
+    @DisplayName("login and password fields should be displayed")
     @Description("В этом тест кейсе мы проверяем, что в полях для ввода, присудствуют идентифицирующие названия полей  (login,password), соответствующие вводимым данным")
     public void loginAndPasswordFieldsShouldBeDisplayed() {
         authorizationScreenStep.checkingIdentifyingFieldNames();
@@ -89,7 +89,7 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("must Log In")
+    @DisplayName("Must Log In")
     @Description("В этом тест кейсе мы проверяем, что при вводе правильного логина и пароля пользователь входит в систему")
     public void mustLogIn() {
         authorizationScreenStep.validLoginPassword(authInfo());
@@ -107,7 +107,7 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("warning Messages Should Appear When Entering An Incorrect Password")
+    @DisplayName("Warning messages should appear when entering an incorrect password")
     @Description("В этом тест кейсе мы проверяем, что при вводе неправильного логина или пароля пользователь не входит в систему, появляется надпись Wrong login or password")
     public void warningMessagesShouldAppearWhenEnteringAnIncorrectPassword() {
         authorizationScreenStep.invalidAuthorizationLoginPassword();
@@ -116,7 +116,7 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("warning Messages Should Appear When You Enter Space")
+    @DisplayName("Warning Messages Should Appear When You Enter Space")
     @Description("В этом тест кейсе мы проверяем, что при невведенном логине и пароле появлется предупреждающая надпись Login and password cannot be empty")
     public void warningMessagesShouldAppearWhenYouEnterSpace() {
         authorizationScreenStep.invalidAuthorization();
@@ -126,7 +126,7 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("warning Messages Should Appear When The Password Field Is Blank")
+    @DisplayName("Warning Messages Should Appear When The Password Field Is Blank")
     @Description("В этом тест кейсе мы проверяем, что при невведенном пароле появлется предупреждающая надпись Login and password cannot be empty")
     public void warningMessagesShouldAppearWhenThePasswordFieldIsBlank() {
         authorizationScreenStep.invalidAuthorization();
@@ -135,7 +135,7 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("warning Messages Should Appear When The Login Field Is Empty")
+    @DisplayName("Warning Messages Should Appear When The Login Field Is Empty")
     @Description("В этом тест кейсе мы проверяем, что при невведенном логине появлется предупреждающая надпись Login and password cannot be empty")
     public void warningMessagesShouldAppearWhenTheLoginFieldIsEmpty() {
         authorizationScreenStep.invalidAuthorization();
@@ -144,7 +144,7 @@ public class AuthorizationScreenTest {
     }
 
     @Test
-    @DisplayName("must Log Out Of Profile")
+    @DisplayName("Must log out of profile")
     @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку выхода и нажатии log out, пользователь выходит из профиля")
     public void mustLogOutOfProfile() {
         authorizationScreenStep.validLoginPassword(authInfo());

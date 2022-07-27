@@ -66,7 +66,7 @@ public class ControlPanelScreenTest {
 
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Control Panel")
     public void theScreenShouldHaveName() {
         mainScreenStep.switchingToTheControlPanel();
@@ -95,7 +95,7 @@ public class ControlPanelScreenTest {
     }
 
     @Test
-    @DisplayName("must go to the News Filter")
+    @DisplayName("must go to the Filter news")
     @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"три полоски с кружками\" в  Control panel, пользователь попадает в \"Filter news\" ")
     public void mustGoToTheNewsFilter() {
         mainScreenStep.switchingToTheControlPanel();
@@ -193,12 +193,17 @@ public class ControlPanelScreenTest {
     }
 
     @Test
-    @DisplayName("Must go to Filter news from Control panel")
-    @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"три полоски с кружками\" в  Control panel, пользователь попадает в \"Filter news\" ")
-    public void mustGoToFilterNewsFromControlPanel() {
-        mainScreenStep.switchingToTheControlPanel();
-        controlPanelScreenStep.pressingTheButtonToGoToTheAdvancedNewsSearchScreen();
-        filterNewsScreenStep.checkingTheScreenNameForNewsSearch();
+    @DisplayName("A description should appear in the news block in the Control panel")
+    @Description(" В этом тест кейсе мы проверяем, что при нажатии на кнопку \"стрелка вниз\" или нажатии на новость, появляется описание")
+    public void aDescriptionShouldAppearInTheNewsBlockInTheControlPanel() {
+        int position = randomNews(0);
+
+        controlPanelScreenStep.checkingTheInvisibilityOfTheNewsDescription();
+        SystemClock.sleep(2000);
+        controlPanelScreenStep.clickingOnRandomlySelectedNewsItem(position);
+        SystemClock.sleep(2000);
+        controlPanelScreenStep.checkingTheVisibilityOfTheNewsDescription();
+
     }
 
     @Test

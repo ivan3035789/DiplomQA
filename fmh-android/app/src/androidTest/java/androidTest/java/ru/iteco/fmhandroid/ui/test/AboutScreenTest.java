@@ -82,7 +82,7 @@ public class AboutScreenTest {
 
     @Test
     @DisplayName("must be the name of the manufacturer")
-    @Description("В этом тест кейсе мы проверяем наличие информации на странице о текущей версии приложения")
+    @Description("В этом тест кейсе мы проверяем наличие информации на странице о производителе")
     public void mustBeTheNameOfTheManufacturer() {
         mainScreenStep.clickingOnTheActionMenuButton();
         mainScreenStep.clickingOnTheAboutName();

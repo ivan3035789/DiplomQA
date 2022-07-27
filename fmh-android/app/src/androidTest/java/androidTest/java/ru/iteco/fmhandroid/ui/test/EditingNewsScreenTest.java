@@ -41,7 +41,7 @@ public class EditingNewsScreenTest {
     WatchScreenStep watchScreenStep = new WatchScreenStep();
 
     @Rule
-    public androidx.test.rule.ActivityTestRule<AppActivity> ActivityTestRule = new ActivityTestRule<>(AppActivity.class);
+    public ActivityTestRule<AppActivity> ActivityTestRule = new ActivityTestRule<>(AppActivity.class);
 
     @Before
     public void logoutCheck() {
@@ -60,21 +60,12 @@ public class EditingNewsScreenTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Editing News")
     public void theScreenShouldHaveName() {
         mainScreenStep.switchingToTheControlPanel();
         controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();
         editingNewsScreenStep.checkingTheNameOfTheEditingNewsScreen();
-    }
-
-    @Test
-    @DisplayName("the fields must have names")
-    @Description("В этом тест кейсе мы проверяем названия незаполненных полей")
-    public void theFieldsMustHaveNames() {
-        mainScreenStep.switchingToTheControlPanel();
-        controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();
-        editingNewsScreenStep.checkNameFieldInEditingNews();
     }
 
     @Test
@@ -185,7 +176,7 @@ public class EditingNewsScreenTest {
     @DisplayName("Canceling news editing")
     @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"CANCEL\" и после появления окна с " +
             "предупреждающей надписью и кнопками  \"CANCEL\", \"ок\" при нажатии на кнопку  \"ок\" пользователь выходит " +
-            "из Еditing News в  \"Control panel\"  ")
+            "из Еditing News в \"Control panel\", новость не отредактирована")
     public void cancelingNewsEditing() {
         String text = textSymbol(5);
         String Category = randomCategory();
@@ -228,7 +219,7 @@ public class EditingNewsScreenTest {
 
     @Test
     @DisplayName("A warning message should appear if the fields are empty when clicking on the save button")
-    @Description("В этом тест кейсе мы проверяем, что при незаполненном, незаполненных полях появляется предупреждающее сообщение, после нажатия на кнопку \"SAVE\"  \"fill empty fields\"  ")
+    @Description("В этом тест кейсе мы проверяем, что при незаполненном, незаполненных полях появляется предупреждающее сообщение, после нажатия на кнопку \"SAVE\"  \"fill empty fields\" ")
     public void aWarningMessageShouldAppearIfTheFieldsAreEmptyWhenClickingOnTheSaveButton() {
         mainScreenStep.switchingToTheControlPanel();
         controlPanelScreenStep.clickingOnTheButtonToGoToTheNewsEditingScreen();

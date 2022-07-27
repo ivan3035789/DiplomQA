@@ -58,7 +58,7 @@ public class ЕditingClaimsScreenTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Editing Claims")
     public void theScreenShouldHaveName() {
         editingClaimsScreenStep.goToTheClaimCardWithTheOpenStatus();
@@ -68,19 +68,6 @@ public class ЕditingClaimsScreenTest {
         claimsScreenStep.clickingOnTheNotepadWithPencilButton();
         SystemClock.sleep(3000);
         editingClaimsScreenStep.checkingTheNameOfTheScreenForEditingClaims();
-    }
-
-    @Test
-    @DisplayName("the fields must have names")
-    @Description("В этом тест кейсе мы проверяем, что поля имеют идентифицирующие названия")
-    public void FieldsMustHaveNames() {
-        editingClaimsScreenStep.goToTheClaimCardWithTheOpenStatus();
-        SystemClock.sleep(3000);
-        Helper.Swipes.swipeToBottom();
-        SystemClock.sleep(3000);
-        claimsScreenStep.clickingOnTheNotepadWithPencilButton();
-        SystemClock.sleep(3000);
-        editingClaimsScreenStep.checkNameFieldInEditingClaims();
     }
 
     @Test

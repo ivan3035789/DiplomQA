@@ -53,7 +53,7 @@ public class FilteringScreenTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Filtering")
     public void theScreenShouldHaveName() {
         filteringWindowScreenStep.switchingToFilteringWindow();

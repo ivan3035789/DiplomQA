@@ -67,7 +67,7 @@ public class FilterNewsScreenTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Filter News")
     public void theScreenShouldHaveName() {
         mainScreenStep.clickingOnTheActionMenuButton();
@@ -78,7 +78,7 @@ public class FilterNewsScreenTest {
 
     @Test
     @DisplayName("the fields must have names")
-    @Description("В этом тест кейсе мы проверяемя названия полей")
+    @Description("В этом тест кейсе мы проверяем названия полей")
     public void theFieldsMustHaveNames() {
         mainScreenStep.clickingOnTheActionMenuButton();
         mainScreenStep.clickingOnTheNewsName();

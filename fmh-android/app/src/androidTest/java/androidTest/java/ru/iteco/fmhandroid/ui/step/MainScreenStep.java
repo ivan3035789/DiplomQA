@@ -155,6 +155,14 @@ public class MainScreenStep {
         textNews.check(matches(isDisplayed()));
     }
 
+    public void checkingTheNamesOfScreensInTheList() {
+        Allure.step("Проверка названий экранов в списке");
+        mainScreenElements.getTitleMain().check(matches(isDisplayed()));
+        mainScreenElements.getTitleNews().check(matches(isDisplayed()));
+        mainScreenElements.getTitleClaimsScreen().check(matches(isDisplayed()));
+        mainScreenElements.getTitleAbout().check(matches(isDisplayed()));
+    }
+
     public void randomTransitionToCreatingClaims() {
         Allure.step("Рандомный переход в Creating Claims");
         //добавить шаги в тесты

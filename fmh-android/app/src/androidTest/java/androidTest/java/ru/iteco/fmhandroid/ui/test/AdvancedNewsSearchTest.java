@@ -68,7 +68,7 @@ public class AdvancedNewsSearchTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have name")
     @Description("В этом тест кейсе мы проверяем название экрана Filter news")
     public void theScreenShouldHaveName() {
         mainScreenStep.switchingToTheControlPanel();

@@ -62,7 +62,7 @@ public class CreatingClaimsScreenTest {
     }
 
     @Test
-    @DisplayName("У экрана должно быть название")
+    @DisplayName("The screen should have a name")
     @Description("В этом тест кейсе мы проверяем название экрана Creating Claims")
     public void theScreenShouldHaveName() {
         mainScreenStep.randomTransitionToCreatingClaims();
@@ -88,7 +88,7 @@ public class CreatingClaimsScreenTest {
         creatingClaimsScreenStep.checkingTheNumberOfCharactersEnteredAndCharactersInTheField();
     }
 
-    @Test
+    @Test//добавить в тесты
     @DisplayName("A drop-down list with categories should appear")
     @Description("В этом тест кейсе мы проверяем, что при клике на поле \"Category\" появляется выпадающий список с доспупными категориями")
     public void aDropDownListWithCategoriesShouldAppear() {
@@ -162,7 +162,7 @@ public class CreatingClaimsScreenTest {
 
     @Test
     @DisplayName("A claim with the Open status should be created")
-    @Description("В этом тест кейсе мы проверяем, что при отсутствии ввода, или ввода исполнителя не из выпадающего  списка создается претензия со статусом \"Open\"")
+    @Description("В этом тест кейсе мы проверяем, что при отсутствии ввода исполнителя, или ввода исполнителя не из выпадающего  списка создается претензия со статусом \"Open\"")
     public void aClaimWithTheOpenStatusShouldBeCreated() {
         String titleText = textSymbol(5);
         enterCreateClaimsActionButton();
@@ -191,7 +191,7 @@ public class CreatingClaimsScreenTest {
 
     @Test
     @DisplayName("Cancellation of the claim creation")
-    @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку CANCEL после заполнения полей Title, Executor, Date Time, Description, валидными значениями, или незаполнения полей, не должна создаться  Claims в блоке topic (не должна появиться в ленте Claims на странице Claims")
+    @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку CANCEL после заполнения полей Title, Executor, Date Time, Description, валидными значениями, или незаполнения полей, не должна создаться претензия в блоке Claims (не должна появиться в ленте Claims на странице Claims")
     public void cancellationOfTheClaimCreation() {
         String titleText = textSymbol(5);
         String randomExecutor = randomExecutor();
@@ -250,7 +250,7 @@ public class CreatingClaimsScreenTest {
 
     @Test
     @DisplayName("Cancellation of cancellation of claim creation")
-    @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"CANCEL\" и после появления окна с предупреждающей надписью и кнопками  \"CANCEL\", \"ок\" при нажатии на кнопку \"CANCEL\" происходит отмена выхода из создания претензии  пользователь остается в \"\"Creating Claims\"  ")
+    @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"CANCEL\" и после появления окна с предупреждающей надписью и кнопками  \"CANCEL\", \"ок\" при нажатии на кнопку \"CANCEL\" происходит отмена выхода из создания претензии  пользователь остается в \"Creating Claims\"  ")
     public void cancellationOfCancellationOfClaimCreation() {
         String titleText = textSymbol(5);
         String randomExecutor = randomExecutor();

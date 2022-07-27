@@ -59,6 +59,15 @@ public class MainScreenTest {
     }
 
     @Test
+    @DisplayName("A drop-down list with page names should appear")
+    @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"Action menu\", должно появиться выпадающее окно с экранами \"Main, Claims, News, About\"")
+    public void aDropDownListWithPageNamesShouldAppear() {
+        mainScreenStep.clickingOnTheActionMenuButton();
+        SystemClock.sleep(3000);
+        mainScreenStep.checkingTheNamesOfScreensInTheList();
+    }
+
+    @Test
     @DisplayName("must Go To The Screen News")
     @Description("В этом тест кейсе мы проверяем, что при нажатии на кнопку \"Action menu\", должно появиться окно с" +
             " выбором страниц, при нажатии на каждую выбранную страницу, должен происходит переход на нее, выбранная" +

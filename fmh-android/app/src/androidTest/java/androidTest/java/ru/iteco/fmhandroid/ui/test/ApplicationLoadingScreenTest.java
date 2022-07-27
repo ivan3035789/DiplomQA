@@ -37,21 +37,21 @@ public class ApplicationLoadingScreenTest {
     }
 
     @Test
-    @DisplayName("the picture should be displayed")
+    @DisplayName("The picture should be displayed")
     @Description("В этом тест кейсе мы проверяем, что  во время загрузки приложения появляется картинка (картинки каждый раз при загрузке меняются)")
     public void thePictureShouldBeDisplayed() {
         applicationLoadingScreenStep.checkSplashscreenImageView();
     }
 
     @Test
-    @DisplayName("the text should be displayed")
+    @DisplayName("The text should be displayed")
     @Description("В этом тест кейсе мы проверяем, что  во время загрузки приложения появляется  цитата (цитаты при входе каждый раз меняются)")
     public void theTextShouldBeDisplayed() {
         applicationLoadingScreenStep.checkSplashscreenTextView();
     }
 
     @Test
-    @DisplayName("the download icon should be displayed")
+    @DisplayName("The download icon should be displayed")
     @Description("В этом тест кейсе мы проверяем, что  во время загрузки приложения появляется индекатор загрузки)")
     public void theDownloadIconShouldBeDisplayed() {
         applicationLoadingScreenStep.checkProgressIndicator();
