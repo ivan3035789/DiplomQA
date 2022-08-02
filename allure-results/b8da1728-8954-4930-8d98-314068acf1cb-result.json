@@ -1,0 +1,245 @@
+{
+    "name": "Canceling the date selection and setting",
+    "start": 1659352752042,
+    "stop": 1659352785151,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что при нажатии на кнопку \"Cancel\", происходит отмена установки выбраной даты, календарь закрывается",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352760408,
+            "stop": 1659352760408,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку +",
+            "start": 1659352766419,
+            "stop": 1659352766419,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на поле дата",
+            "start": 1659352766699,
+            "stop": 1659352766699,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку для выбора года",
+            "start": 1659352767298,
+            "stop": 1659352767298,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Установка года",
+            "start": 1659352770869,
+            "stop": 1659352770869,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка отображения в Header календаря изменения года",
+            "start": 1659352771369,
+            "stop": 1659352771369,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку перехода к следующему месяцу {randomMonth} раз",
+            "start": 1659352771371,
+            "stop": 1659352771371,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Установка даты",
+            "start": 1659352774849,
+            "stop": 1659352774849,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка отображения в Header календаря изменения месяца, числа",
+            "start": 1659352775139,
+            "stop": 1659352775139,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку отмены установки года",
+            "start": 1659352778143,
+            "stop": 1659352778143,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия экрана создания претензии creating Claims",
+            "start": 1659352781483,
+            "stop": 1659352781483,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка отсутствия установленного года в поле",
+            "start": 1659352781487,
+            "stop": 1659352781487,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "b8da1728-8954-4930-8d98-314068acf1cb",
+    "historyId": "f82789a481b98be489a667efe38d90fe",
+    "fullName": "ru.iteco.fmhandroid.ui.test.CalendarScreenTest.cancelingTheDateSelectionAndSetting",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.CalendarScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "cancelingTheDateSelectionAndSetting"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.CalendarScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

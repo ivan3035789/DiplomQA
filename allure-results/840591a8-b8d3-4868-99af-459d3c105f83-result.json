@@ -1,0 +1,341 @@
+{
+    "name": "Canceling the search",
+    "start": 1659353179535,
+    "stop": 1659353210353,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем отмену поиска",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659353187895,
+            "stop": 1659353187895,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход в Control Panel",
+            "start": 1659353187905,
+            "stop": 1659353187905,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659353187906,
+            "stop": 1659353187907,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название News",
+            "start": 1659353188302,
+            "stop": 1659353188302,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку перехода в Control panel",
+            "start": 1659353188766,
+            "stop": 1659353188766,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на новость выбранную случайным образом",
+            "start": 1659353189281,
+            "stop": 1659353189281,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку удаления новости",
+            "start": 1659353189631,
+            "stop": 1659353189632,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку подтверждения удаления новости",
+            "start": 1659353192047,
+            "stop": 1659353192047,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на новость выбранную случайным образом",
+            "start": 1659353194349,
+            "stop": 1659353194349,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку удаления новости",
+            "start": 1659353194643,
+            "stop": 1659353194643,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход в Control Panel",
+            "start": 1659353199655,
+            "stop": 1659353199655,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659353199656,
+            "stop": 1659353199656,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название News",
+            "start": 1659353200091,
+            "stop": 1659353200091,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку перехода в Control panel",
+            "start": 1659353200541,
+            "stop": 1659353200541,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку для перехода на экран расширенного поиска новостей",
+            "start": 1659353200921,
+            "stop": 1659353200921,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия экрана расширенного поиска",
+            "start": 1659353201259,
+            "stop": 1659353201259,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку Cancel отмена поиска",
+            "start": 1659353204264,
+            "stop": 1659353204264,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия экрана Control Panel",
+            "start": 1659353204749,
+            "stop": 1659353204749,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "840591a8-b8d3-4868-99af-459d3c105f83",
+    "historyId": "47adbf63989aa47dd64a62dd52e8deac",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AdvancedNewsSearchTest.cancelingTheSearch",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AdvancedNewsSearchTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "cancelingTheSearch"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AdvancedNewsSearchTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1311)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

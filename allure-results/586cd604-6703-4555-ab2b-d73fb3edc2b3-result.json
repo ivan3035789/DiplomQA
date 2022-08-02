@@ -1,0 +1,341 @@
+{
+    "name": "must find news with active status",
+    "start": 1659352352817,
+    "stop": 1659352388352,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем поиск новости по статусу Active",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352361175,
+            "stop": 1659352361175,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход в Control Panel",
+            "start": 1659352361196,
+            "stop": 1659352361196,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659352361198,
+            "stop": 1659352361198,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название News",
+            "start": 1659352361600,
+            "stop": 1659352361600,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку перехода в Control panel",
+            "start": 1659352361939,
+            "stop": 1659352361939,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на новость выбранную случайным образом",
+            "start": 1659352362491,
+            "stop": 1659352362492,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку удаления новости",
+            "start": 1659352362828,
+            "stop": 1659352362828,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Переход в Control Panel",
+            "start": 1659352367857,
+            "stop": 1659352367858,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659352367859,
+            "stop": 1659352367859,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название News",
+            "start": 1659352368300,
+            "stop": 1659352368300,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку перехода в Control panel",
+            "start": 1659352368785,
+            "stop": 1659352368785,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на новость выбранную случайным образом",
+            "start": 1659352369165,
+            "stop": 1659352369165,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку для перехода на экран расширенного поиска новостей",
+            "start": 1659352372451,
+            "stop": 1659352372451,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия экрана расширенного поиска",
+            "start": 1659352372806,
+            "stop": 1659352372806,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на чек бокс Active",
+            "start": 1659352372808,
+            "stop": 1659352372808,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку filter поиска новостей",
+            "start": 1659352376104,
+            "stop": 1659352376104,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на новость выбранную случайным образом",
+            "start": 1659352379453,
+            "stop": 1659352379453,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка статуса Active",
+            "start": 1659352382738,
+            "stop": 1659352382738,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "586cd604-6703-4555-ab2b-d73fb3edc2b3",
+    "historyId": "a2aaba1bbfd1ba300eefb8486605e703",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AdvancedNewsSearchTest.mustFindNewsWithActiveStatus",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AdvancedNewsSearchTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "mustFindNewsWithActiveStatus"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AdvancedNewsSearchTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

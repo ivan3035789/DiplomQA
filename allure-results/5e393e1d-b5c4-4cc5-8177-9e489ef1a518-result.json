@@ -1,0 +1,133 @@
+{
+    "name": "should go to the create claims section",
+    "start": 1659352909558,
+    "stop": 1659352924936,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что при нажатии на кнопку \"+\" пользователь попадает в \"Creating Claims\"",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352918016,
+            "stop": 1659352918016,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659352918023,
+            "stop": 1659352918023,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название Claims",
+            "start": 1659352918465,
+            "stop": 1659352918465,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку перехода на экран создания претензии",
+            "start": 1659352918951,
+            "stop": 1659352918951,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия экрана создания претензии creating Claims",
+            "start": 1659352919267,
+            "stop": 1659352919267,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "5e393e1d-b5c4-4cc5-8177-9e489ef1a518",
+    "historyId": "691ab47a126ba070b7abafeea6e466cd",
+    "fullName": "ru.iteco.fmhandroid.ui.test.ClaimsScreenTest.shouldGoToTheCreateClaimsSection",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldGoToTheCreateClaimsSection"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

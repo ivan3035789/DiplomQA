@@ -1,0 +1,149 @@
+{
+    "name": "Must choose the day of the month",
+    "start": 1659352785156,
+    "stop": 1659352801349,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что при нажатии на числа месяца черного цвета, число выбирается и выставляется ",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352793504,
+            "stop": 1659352793504,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку +",
+            "start": 1659352793511,
+            "stop": 1659352793511,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия экрана создания претензии creating Claims",
+            "start": 1659352793796,
+            "stop": 1659352793796,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на поле дата",
+            "start": 1659352793802,
+            "stop": 1659352793802,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Установка даты",
+            "start": 1659352794391,
+            "stop": 1659352794391,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка отображения в Header календаря изменения месяца, числа",
+            "start": 1659352797698,
+            "stop": 1659352797698,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "1a56b33c-42c2-44cd-8b2a-87df5ee20044",
+    "historyId": "aa165e8d22eccb3598713d0f29e969d6",
+    "fullName": "ru.iteco.fmhandroid.ui.test.CalendarScreenTest.mustChooseTheDayOfTheMonth",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.CalendarScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "mustChooseTheDayOfTheMonth"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.CalendarScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

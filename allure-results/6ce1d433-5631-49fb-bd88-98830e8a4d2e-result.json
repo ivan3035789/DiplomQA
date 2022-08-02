@@ -1,0 +1,165 @@
+{
+    "name": "Must follow the link in Privacy Policy",
+    "start": 1659352038367,
+    "stop": 1659352051090,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем переход пользователя на страницу по ссылке указанной в Privacy Policy (страница About)",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352046711,
+            "stop": 1659352046711,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659352046758,
+            "stop": 1659352046758,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название About",
+            "start": 1659352047183,
+            "stop": 1659352047183,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия {privacyPolicy}",
+            "start": 1659352047459,
+            "stop": 1659352047459,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия ссылки {linkPrivacyPolicy}",
+            "start": 1659352047461,
+            "stop": 1659352047461,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия ссылки {linkPrivacyPolicy}",
+            "start": 1659352047464,
+            "stop": 1659352047464,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия ссылки {linkTermsOfUse}",
+            "start": 1659352047465,
+            "stop": 1659352047465,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "6ce1d433-5631-49fb-bd88-98830e8a4d2e",
+    "historyId": "cf7cb3308e74dfb34dc29ee1aed623c3",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AboutScreenTest.mustFollowTheLinkInPrivacyPolicy",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "mustFollowTheLinkInPrivacyPolicy"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

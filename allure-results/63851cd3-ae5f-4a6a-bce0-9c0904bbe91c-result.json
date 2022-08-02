@@ -1,0 +1,117 @@
+{
+    "name": "Warning messages should appear when entering an incorrect password",
+    "start": 1659352668043,
+    "stop": 1659352685030,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что при вводе неправильного логина или пароля пользователь не входит в систему, появляется надпись Wrong login or password",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352676401,
+            "stop": 1659352676401,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Попытка авторизации при вводе невалидного login и Password",
+            "start": 1659352676405,
+            "stop": 1659352676405,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352676405,
+            "stop": 1659352676406,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка появления предупреждающего сообщения Wrong login or password",
+            "start": 1659352679420,
+            "stop": 1659352679420,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "63851cd3-ae5f-4a6a-bce0-9c0904bbe91c",
+    "historyId": "74efa6ddccb57f513f5ecfd8991526bf",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest.warningMessagesShouldAppearWhenEnteringAnIncorrectPassword",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "warningMessagesShouldAppearWhenEnteringAnIncorrectPassword"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

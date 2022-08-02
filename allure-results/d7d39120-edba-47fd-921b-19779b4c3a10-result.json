@@ -1,0 +1,117 @@
+{
+    "name": "Should display information about the version of the application",
+    "start": 1659352063843,
+    "stop": 1659352076492,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем наличие информации на странице о текущей версии приложения",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352072201,
+            "stop": 1659352072201,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на кнопку ActionMenu",
+            "start": 1659352072226,
+            "stop": 1659352072226,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие на название About",
+            "start": 1659352072641,
+            "stop": 1659352072641,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка экрана About {version} и {namVersion}",
+            "start": 1659352072905,
+            "stop": 1659352072905,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "d7d39120-edba-47fd-921b-19779b4c3a10",
+    "historyId": "a3ca34aaba8013ffce713cfb7c27d41d",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AboutScreenTest.ShouldDisplayInformationAboutTheVersionOfTheApplication",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "ShouldDisplayInformationAboutTheVersionOfTheApplication"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "name": "Warning Messages Should Appear When The Login Field Is Empty",
+    "start": 1659352617224,
+    "stop": 1659352634418,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что при невведенном логине появлется предупреждающая надпись Login and password cannot be empty",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352625626,
+            "stop": 1659352625626,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки выхода из профиля",
+            "start": 1659352625637,
+            "stop": 1659352625637,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Попытка авторизации при вводе невалидного login или Password",
+            "start": 1659352626335,
+            "stop": 1659352626335,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352626335,
+            "stop": 1659352626335,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка появления предупреждающего сообщения Login and password cannot be empty",
+            "start": 1659352628846,
+            "stop": 1659352628846,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "3f68761e-15b7-4f39-9007-5ad2e7797573",
+    "historyId": "fa558a07f54c40bae9435e1fe04db1c6",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest.warningMessagesShouldAppearWhenTheLoginFieldIsEmpty",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "warningMessagesShouldAppearWhenTheLoginFieldIsEmpty"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

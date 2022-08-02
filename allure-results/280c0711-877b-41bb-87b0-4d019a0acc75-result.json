@@ -1,0 +1,69 @@
+{
+    "name": "The picture should be displayed",
+    "start": 1659352484584,
+    "stop": 1659352489525,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что  во время загрузки приложения появляется картинка (картинки каждый раз при загрузке меняются)",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка просмотр изображения на заставке",
+            "start": 1659352485943,
+            "stop": 1659352485943,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "280c0711-877b-41bb-87b0-4d019a0acc75",
+    "historyId": "37db174b50d5542e96f42858a151de2a",
+    "fullName": "ru.iteco.fmhandroid.ui.test.ApplicationLoadingScreenTest.thePictureShouldBeDisplayed",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.ApplicationLoadingScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "thePictureShouldBeDisplayed"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.ApplicationLoadingScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

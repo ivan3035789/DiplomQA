@@ -1,0 +1,149 @@
+{
+    "name": "Must log out of profile",
+    "start": 1659352559683,
+    "stop": 1659352580831,
+    "stage": "finished",
+    "description": "В этом тест кейсе мы проверяем, что при нажатии на кнопку выхода и нажатии log out, пользователь выходит из профиля",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352568028,
+            "stop": 1659352568028,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Ввод валидного Login Password",
+            "start": 1659352568033,
+            "stop": 1659352568033,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352568034,
+            "stop": 1659352568034,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка нахождения пользователя на экране Main",
+            "start": 1659352574527,
+            "stop": 1659352574527,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Нажатие кнопки выхода из профиля",
+            "start": 1659352574532,
+            "stop": 1659352574532,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        },
+        {
+            "name": "Проверка названия Экрана Авторизации",
+            "start": 1659352575224,
+            "stop": 1659352575224,
+            "stage": "finished",
+            "description": null,
+            "descriptionHtml": null,
+            "status": "passed",
+            "statusDetails": null,
+            "steps": [
+            ],
+            "attachments": [
+            ],
+            "parameters": [
+            ]
+        }
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "4d344fc9-0287-4f38-93ed-5d818e293071",
+    "historyId": "8ec647f157bdc020e42be1293392650",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest.mustLogOutOfProfile",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "mustLogOutOfProfile"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationScreenTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1306)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
