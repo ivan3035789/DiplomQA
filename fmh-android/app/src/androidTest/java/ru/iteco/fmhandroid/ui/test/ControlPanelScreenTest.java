@@ -200,11 +200,11 @@ public class ControlPanelScreenTest {
         String descriptionNews = controlPanelScreenStep.descriptionNews();
 
         SystemClock.sleep(2000);
-//        controlPanelScreenStep.checkingTheInvisibilityOfTheNewsDescription(descriptionNews);
-//        SystemClock.sleep(2000);
+        controlPanelScreenStep.checkingTheInvisibilityOfTheNewsDescription(descriptionNews);
+        SystemClock.sleep(2000);
         controlPanelScreenStep.clickingOnRandomlySelectedNewsItem(position);
         SystemClock.sleep(2000);
-        controlPanelScreenStep.checkingTheVisibilityOfTheNewsDescription(descriptionNews);
+        controlPanelScreenStep.checkingTheVisibilityOfTheNewsDescription();
 
     }
 

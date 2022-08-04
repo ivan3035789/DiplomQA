@@ -210,22 +210,22 @@ public class ClaimsScreenStep {
 
     public void checkingTheOpenStatus() {
         Allure.step("Проверка открытого статуса");
-        claimsScreenElements.getStatus().check(matches(withText("Open"))).check(matches(isDisplayed()));
+        claimsScreenElements.getStatusOpen().check(matches(isDisplayed()));
     }
 
     public void checkingTheInProgressStatus() {
         Allure.step("Проверка статуса In Progress");
-        claimsScreenElements.getStatus().check(matches(withText("In progress"))).check(matches(isDisplayed()));
+        claimsScreenElements.getStatusInProgress().check(matches(isDisplayed()));
     }
 
     public void checkingTheExecutedStatus() {
         Allure.step("Проверка статуса Executed");
-        claimsScreenElements.getStatus().check(matches(withText("Executed"))).check(matches(isDisplayed()));
+        claimsScreenElements.getStatusExecuted().check(matches(isDisplayed()));
     }
 
     public void checkingTheCanceledStatus() {
         Allure.step("Проверка статуса Canceled");
-        claimsScreenElements.getStatus().check(matches(withText("Canceled"))).check(matches(isDisplayed()));
+        claimsScreenElements.getStatusCancelled().check(matches(isDisplayed()));
     }
 
     public void checkingForTheAbsenceOfAnUncreatedClaim(String titleText) {

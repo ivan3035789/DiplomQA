@@ -307,7 +307,8 @@ public class ClaimsScreenTest {
         claimsScreenStep.clickingOnTheButtonWithTheNotepadIconWithGear();
         SystemClock.sleep(2000);
         claimsScreenStep.clickingOnTakeToWork();
-        SystemClock.sleep(2000);
+        Helper.Swipes.swipeToTop();
+        SystemClock.sleep(5000);
         claimsScreenStep.checkingTheInProgressStatus();
         SystemClock.sleep(2000);
         claimsScreenStep.clickingOnTheButtonWithTheNotepadIconWithGear();
@@ -329,9 +330,13 @@ public class ClaimsScreenTest {
         mainScreenStep.clickingOnTheActionMenuButton();
         mainScreenStep.clickingOnTheClaimsName();
         claimsScreenStep.searchForClaimsWithTheOpenStatus();
-        SystemClock.sleep(3000);
+        claimsScreenStep.checkingTheOpenStatus();
+        Helper.Swipes.swipeToBottom();
+        SystemClock.sleep(5000);
         claimsScreenStep.clickingOnTheButtonWithTheNotepadIconWithGear();
         claimsScreenStep.clickingOnToCancel();
+        Helper.Swipes.swipeToTop();
+        SystemClock.sleep(5000);
         claimsScreenStep.checkingTheCanceledStatus();
     }
 }

@@ -406,7 +406,7 @@ public class Helper {
         }
 
         public static void swipeToTop() {
-            swiper(100, 1000, 0);
+            swiper(1000, 100, 0);
         }
 
         public static void scrollSlowlyUp() {

@@ -39,13 +39,11 @@ public class ClaimsScreenElements {
 
     private final ViewInteraction statusExecuted = onView(
             allOf(withId(R.id.status_label_text_view), withText("Executed"),
-                    withParent(withParent(IsInstanceOf.<View>instanceOf(androidx.cardview.widget.CardView.class))),
-                    isDisplayed()));
+                    withParent(withParent(IsInstanceOf.<View>instanceOf(androidx.cardview.widget.CardView.class)))));
 
     private final ViewInteraction statusCancelled = onView(
             allOf(withId(R.id.status_label_text_view), withText("Canceled"),
-                    withParent(withParent(IsInstanceOf.<View>instanceOf(androidx.cardview.widget.CardView.class))),
-                    isDisplayed()));
+                    withParent(withParent(IsInstanceOf.<View>instanceOf(androidx.cardview.widget.CardView.class)))));
 
     private final ViewInteraction exitButton = onView(
             allOf(withId(R.id.close_image_button), withContentDescription("button close"),
