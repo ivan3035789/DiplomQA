@@ -103,21 +103,21 @@ public class Helper {
     }
 
     public static AuthInfo authInfo() {
-        String login = "login2";
-        String password = "password2";
+        String login = "login1";
+        String password = "password1";
         return new AuthInfo(login, password);
     }
 
     public static AuthInfo invalidAuthInfo() {
         Faker faker = new Faker();
         Random random = new Random();
-        String[] invalidLogin = {"login2", "", " ", faker.name.firstName() + "@" + faker.name.lastName()};
+        String[] invalidLogin = {"login1", "", " ", faker.name.firstName() + "@" + faker.name.lastName()};
         String[] emptyString = {"", " "};
         String[] invalidPassword = {" ", ""};
         String randomEmptyString = emptyString[random.nextInt(emptyString.length)];
         String randomPassword = invalidPassword[random.nextInt(invalidPassword.length)];
         String randomLogin = invalidLogin[random.nextInt(invalidLogin.length)];
-        String login = (randomLogin.equals("login2") ? randomEmptyString : invalidLogin[0]);
+        String login = (randomLogin.equals("login1") ? randomEmptyString : invalidLogin[0]);
         String password = (randomPassword.equals("") ? randomEmptyString : invalidPassword[0]);
         return new AuthInfo(login, password);
     }
@@ -125,7 +125,7 @@ public class Helper {
     public static AuthInfo invalidLoginPasswordAuthInfo() {
         Faker faker = new Faker();
         Random random = new Random();
-        String[] login = {"login", "login1", "///////", "./..", faker.name.firstName(), faker.name.lastName()};
+        String[] login = {"login", "login2", "///////", "./..", faker.name.firstName(), faker.name.lastName()};
         String[] password = {"pass", "password", "@@@@@@", "121587"};
         String invalidLogin = login[random.nextInt(login.length)];
         String invalidPassword = password[random.nextInt(password.length)];

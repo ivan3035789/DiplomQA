@@ -19,7 +19,7 @@ public class AdvancedNewsSearchScreenElements {
     private final ViewInteraction namePage = onView(withId(R.id.filter_news_title_text_view));
     private final ViewInteraction categoryField = onView(
             allOf(withId(R.id.news_item_category_text_auto_complete_text_view),
-                     childAtPosition(
+                    childAtPosition(
                             withClassName(is("android.widget.LinearLayout")), childAtPosition(
                                     withClassName(is("android.widget.LinearLayout")), withId(R.id.news_item_category_text_input_layout),
                                     0),
