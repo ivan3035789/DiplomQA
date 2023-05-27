@@ -103,8 +103,8 @@ public class Helper {
     }
 
     public static AuthInfo authInfo() {
-        String login = "login1";
-        String password = "password1";
+        String login = "login2";
+        String password = "password2";
         return new AuthInfo(login, password);
     }
 
