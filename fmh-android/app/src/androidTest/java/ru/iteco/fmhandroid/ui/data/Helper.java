@@ -254,7 +254,7 @@ public class Helper {
                 SystemClock.sleep(2000);
                 controlPanelScreenStep.clickingOnTheConfirmationButtonToDeleteTheNews();
                 SystemClock.sleep(2000);
-            } catch (RuntimeException exception) {
+            } catch (PerformException e) {
                 break;
             }
             positionNews += 1;

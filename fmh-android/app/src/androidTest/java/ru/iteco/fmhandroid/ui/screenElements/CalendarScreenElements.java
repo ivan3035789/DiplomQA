@@ -52,7 +52,7 @@ public class CalendarScreenElements {
                             1)));
 
     private final ViewInteraction buttonOfTheYear = onView(
-            allOf(withClassName(is("com.google.android.material.textview.MaterialTextView")), withText("2022"),
+            allOf(withClassName(is("com.google.android.material.textview.MaterialTextView")), withText("2023"),
                     childAtPosition(
                             withClassName(is("android.widget.LinearLayout")), childAtPosition(
                                     withClassName(is("android.widget.LinearLayout")), withClassName(is("android.widget.LinearLayout")),
